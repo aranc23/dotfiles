@@ -3,17 +3,16 @@
     "gitea-mcp": {
       "command": "gitea-mcp",
       "env": {
-        "GITEA_URL": "{env:GITEA_HOST}",
-        "GITEA_TOKEN": "{env:GITEA_ACCESS_TOKEN}",
-        "GITEA_ACCESS_TOKEN": "{env:GITEA_ACCESS_TOKEN}"
+        "GITEA_URL": "{{ env.GITEA_HOST }}",
+        "GITEA_TOKEN": "{{ env.GITEA_ACCESS_TOKEN }}",
+        "GITEA_ACCESS_TOKEN": "{{ env.GITEA_ACCESS_TOKEN }}"
       }
     },
     "github": {
-      "command": "sh",
-      "args": [
-        "-c",
-        "exec \"$HOME/.local/share/mise/shims/mcp-remote\" https://api.githubcopilot.com/mcp/ --header \"Authorization: Bearer ${GITHUB_PAT}\""
-      ],
+      "serverUrl": "https://api.githubcopilot.com/mcp/",
+      "headers": {
+        "Authorization": "Bearer {{ env.GITHUB_PAT }}"
+      },
       "disabled": false
     }
   }
