@@ -24,6 +24,7 @@ zoxide = "latest"
 rust = "latest"
 python = "3"
 node = "latest"
+"npm:mcp-remote" = "latest"
 
 [[tools.ruby]]
   version = "3"
