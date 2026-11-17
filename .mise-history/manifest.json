@@ -212,21 +212,6 @@
   ],
   "recipients": [],
   "permissions": {
-    "config/conf.d": 509,
-    "config/conf.d/agents": 448,
-    "config/conf.d/agents/agy": 448,
-    "config/conf.d/agents/opencode": 448,
-    "config/conf.d/claude": 448,
-    "config/conf.d/sops": 448,
-    "config/conf.d/sops/mise.toml": 384,
-    "config/conf.d/ssh": 448,
-    "config/conf.d/ssh/mise.toml": 384,
-    "config/conf.d/zfs": 448,
-    "config/conf.d/zfs/mise.toml": 384,
-    "config/config.ag.toml": 436,
-    "config/config.toml": 384,
-    "config/dotfiles": 509,
-    "config/dotfiles/.gitkeep": 384,
     "home/.bao": 384,
     "home/.bash_profile": 384,
     "home/.config": 448,
@@ -242,10 +227,7 @@
     "home/.ssh/crashland.sh": 448,
     "home/.ssh/mac-test-net.sh": 448,
     "home/.tmux.conf": 384,
-    "home/Library": 448,
-    "home/Library/LaunchAgents": 509,
     "home/bin": 448,
-    "home/bin/keychaintmux": 448,
-    "home/bin/org-sync": 488
+    "home/bin/keychaintmux": 448
   }
 }
