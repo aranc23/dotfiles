@@ -3,7 +3,7 @@
     "gitea-mcp": {
       "command": "gitea-mcp",
       "env": {
-        "GITEA_URL": "{{ env.GITEA_HOST }}",
+        "GITEA_URL": "{{ exec(command='mise env --json | jq -r .GITEA_HOST') | trim }}",
         "GITEA_TOKEN": "{{ env.GITEA_ACCESS_TOKEN }}",
         "GITEA_ACCESS_TOKEN": "{{ env.GITEA_ACCESS_TOKEN }}"
       }
