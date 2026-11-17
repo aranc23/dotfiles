@@ -56,6 +56,12 @@
       "variants": []
     },
     {
+      "path": "home/.forward",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
       "path": "home/.muttrc",
       "autosave": true,
       "encrypt": false,
@@ -75,6 +81,12 @@
     },
     {
       "path": "home/.poshthemes/tokyo.omp.json",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/.procmailrc",
       "autosave": true,
       "encrypt": false,
       "variants": []
@@ -226,6 +238,7 @@
     "home/.tmux.conf": 384,
     "home/bin": 448,
     "home/bin/keychaintmux": 448,
-    "home/bin/org-sync": 488
+    "home/bin/org-sync": 488,
+    "home/bin/zfsmgr-send-all": 448
   }
 }

@@ -144,7 +144,7 @@ fi
 
 export NETHACKOPTIONS='!autopickup,color,name:Manshoon,fruit:wacky fruit,catname:Al,dogname:Elektra,female,horsename:Trotter,showexp,time'
 
-if [[ "${TERM}" == "xterm-kitty" ]]; then
+if [[ "${TERM}" != "dumb" && "${TERM}" != "linux" ]]; then
     posh=$(which oh-my-posh 2>/dev/null)
     if [[ -x $posh ]]; then
         eval "$( $posh init bash --config ~/.poshthemes/tokyo.omp.json )"
