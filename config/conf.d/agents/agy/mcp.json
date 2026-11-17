@@ -9,11 +9,13 @@
       }
     },
     "github": {
-      "serverUrl": "https://api.githubcopilot.com/mcp/",
-      "headers": {
-        "Authorization": "Bearer {env:GITHUB_PAT}"
-      },
-      "disabled": false
+      "command": "sh",
+      "args": [
+        "-c",
+        "exec \"$HOME/.local/share/mise/shims/mcp-remote\" https://api.githubcopilot.com/mcp/ --header \"Authorization: Bearer ${GITHUB_PAT}\""
+      ]
     }
+      "disabled": false
   }
+}
 }
