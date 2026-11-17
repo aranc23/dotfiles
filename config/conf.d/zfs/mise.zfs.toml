@@ -1,0 +1,5 @@
+[tools]
+"cargo:httm" = "latest"
+"gem:zfs_mgmt" = "latest"
+[dotfiles]
+"~/bin/zfsmgr-send-all" = { mode = "track" }

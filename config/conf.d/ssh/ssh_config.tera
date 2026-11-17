@@ -1,0 +1,261 @@
+# -*- mode: conf-space; -*-
+# -*- standard-indent: 4 -*-
+# this file is managed by mise
+{%- set hostname = exec(command="hostname -s") | trim %}
+
+{%- if hostname in ["lazarus", "benway", "beast"] %}
+host barracuda barracuda.divms.uiowa.edu
+        LocalForward {%- if hostname == "lazarus" %} 10300{%- else %} 8001{%- endif %} 127.0.0.1:8000
+{%- endif %}
+
+host benway
+    User spin
+    Hostname benway.crashland
+    ForwardX11 yes
+    VisualHostKey no
+    ForwardAgent no
+
+host dione unity
+     	User throbbinggristle
+	Hostname dione.whatbox.ca
+        HostKeyAlias dione
+	ForwardX11 no
+        VisualHostKey yes
+        DynamicForward 0.0.0.0:7777
+
+Host enlil enlil.crashland
+	HostkeyAlias enlil
+        User root
+	ForwardX11 no
+        HostName 172.29.254.254
+        
+Host beast beast.crashland
+        AddressFamily inet
+        User spin
+        HostKeyAlias beast.crashland
+        CanonicalizeHostname no
+        ForwardAgent no
+
+Host yendor yendor.crashland
+        AddressFamily inet
+        User spin
+        HostKeyAlias yendor.crashland
+        CanonicalizeHostname no
+        ForwardAgent yes
+
+Host wintermute wintermute.crashland
+        AddressFamily inet
+        User spin
+        HostKeyAlias wintermute.crashland
+        CanonicalizeHostname no
+        ForwardAgent no
+
+{%- if hostname not in ["beast", "yendor", "wintermute"] %}
+
+Match host gitea,gitea.crashlandia.xyz localnetwork 172.29.254.0/24,172.29.253.0/24 
+        Hostname 172.29.254.80
+
+Match host gitea,gitea.crashlandia.xyz !localnetwork 172.29.254.0/24,172.29.253.0/24 
+        ProxyJump yendor.crashland
+
+# maybe this works on the laptop when on globalprotect:
+Match host beast,beast.crashland localnetwork 172.29.254.0/24,172.29.253.0/24
+        Hostname 172.29.254.197
+
+Match host beast,beast.crashland !localnetwork 172.29.254.0/24,172.29.253.0/24
+        VisualHostKey yes
+        Checkhostip no
+        HostName 199.188.66.135
+        Port 6201
+        Stricthostkeychecking no
+        #DynamicForward 127.0.0.1:3128
+        #LocalForward 8337 localhost:8337
+
+# maybe this works on the laptop when on globalprotect:
+Match host yendor,yendor.crashland localnetwork 172.29.254.0/24,172.29.253.0/24
+        Hostname 172.29.254.87
+
+Match host yendor,yendor.crashland !localnetwork 172.29.254.0/24,172.29.253.0/24
+        VisualHostKey yes
+        Checkhostip no
+        HostName 199.188.66.135
+        Port 6202
+        Stricthostkeychecking no
+        DynamicForward 127.0.0.1:3128
+        #LocalForward 8337 localhost:8337
+
+Match host wintermute,wintermute.crashland localnetwork 172.29.254.0/24,172.29.253.0/24
+        Hostname 172.29.254.80
+
+Match host wintermute,wintermute.crashland !localnetwork 172.29.254.0/24,172.29.253.0/24
+        VisualHostKey yes
+        Checkhostip no
+        HostName 199.188.66.135
+        Port 6203
+        Stricthostkeychecking no
+        #DynamicForward 127.0.0.1:3128
+        #LocalForward 8337 localhost:8337
+{%- endif %}
+
+Host gitea gitea.crashlandia.xyz
+        Hostname 172.29.254.80
+        Checkhostip no
+        VisualHostKey yes
+        Stricthostkeychecking no
+        Hostkeyalias gitea
+        Port 222
+        User aranc23
+        ForwardAgent no
+	ForwardX11 no
+
+Host jumper
+        User accx
+        HostName linux.divms.uiowa.edu
+        Port 40
+        ControlPath ~/.ssh/jumper
+        ControlMaster auto
+        ControlPersist 240m
+        HostKeyAlias linux.divms.uiowa.edu
+        ServerAliveInterval 300
+{%- if hostname not in ["beast", "wintermute"] %}
+        DynamicForward 8888
+{%- endif %}
+        AddressFamily inet
+
+Host a-lnx005 a-lnx005.divms.uiowa.edu
+        VisualHostKey yes
+        hostname a-lnx005.divms.uiowa.edu
+        #LocalForward 8384 localhost:8384
+        #LocalForward 4444 pulp3test00.divms.uiowa.edu:443
+        #LocalForward 3306 localhost:3306
+        ForwardX11Trusted yes
+        ForwardAgent no
+
+Host linux linux.divms.uiowa.edu
+        VisualHostKey yes
+        hostname linux.divms.uiowa.edu
+        ForwardX11Trusted yes
+
+Match final host linux,linux.divms.uiowa.edu{%- if hostname not in ["beast", "yendor"] %} !localnetwork 128.255.0.0/16{%- endif %}
+        Port 40
+        # DynamicForward 8888
+        # LocalForward 8385 localhost:8384
+        # AddressFamily inet
+
+# Match final host a-lnx005,a-lnx005.divms.uiowa.edu{%- if hostname not in ["beast", "yendor"] %} !localnetwork 128.255.0.0/16{%- endif %}
+#         Port 6200
+#         DynamicForward 8888
+#         LocalForward 8385 localhost:8384
+
+Match final host *.uiowa.edu !originalhost jumper{%- if hostname not in ["beast", "yendor"] %} !localnetwork 128.255.0.0/16{%- endif %}
+     # when a-lnx005 is blocked, we can change jumper to linux.divms or something
+     ProxyJump jumper
+     # alternate reverse proxying:
+     # ProxyCommand nc --proxy-type socks5 --proxy yendor.crashland:6201 %h %p
+
+# skip host key checking on test machines
+Host va-lnx010-* va-lnx005-* a-lnx012 a-lnx013 l-lnx199 a-lnx017 l-lnx199.divms.uiowa.edu kickme kickme.divms.uiowa.edu fastxtest* redis00 redis02 fastxdbtest* cmktest* pulp3test*
+	StrictHostKeyChecking no
+
+# old openbsd based free host
+host devio.us
+        VisualHostKey yes
+        User spin
+
+host luna luna.campus.divms.uiowa.edu
+        ProxyJump sirius.chem.uiowa.edu
+
+host sirius sirius.chem.uiowa.edu
+    Hostname sirius.chem.uiowa.edu
+    User root
+    DynamicForward 127.0.0.1:8991
+
+Host hedwig.chem.uiowa.edu hedwig hermione.chem.uiowa.edu hermione snape.chem.uiowa.edu snape hagrid hagrid.chem.uiowa.edu bellatrix
+    User root
+    ProxyJump sirius.chem.uiowa.edu
+
+host neon
+     hostname neon.hpc.uiowa.edu
+
+host serv41 serv41.divms.uiowa.edu
+	hostname serv41.divms.uiowa.edu
+        DynamicForward 127.0.0.1:9999
+
+host r-lnx500
+     hostname r-lnx500.psychology.uiowa.edu
+host r-lnx501
+     hostname r-lnx501.psychology.uiowa.edu
+host darwin
+     hostname darwin.psychology.uiowa.edu
+     
+host clasnetappvm
+	hostname clasnetappvm-m.iowa.uiowa.edu
+	user iowa\ac_cox
+        ForwardX11 no
+        ControlPath none
+        PreferredAuthentications password
+        PubkeyAuthentication no
+        
+host clasrnetappvm
+	hostname clasrnetappvm-m.iowa.uiowa.edu
+	user iowa\ac_cox
+        ForwardX11 no
+        ControlPath none
+        PreferredAuthentications password
+        PubkeyAuthentication no
+
+host clasr CLASr lcfstor01k
+	hostname lcfstor01k.its.uiowa.edu
+	user iowa\ac_cox
+        ForwardX11 no
+
+host pulp3* grepo.its.uiowa.edu
+        ForwardAgent no
+	ForwardX11 no
+
+host git.uiowa.edu gitlab.com github.com
+        ForwardAgent no
+	ForwardX11 no
+
+Host vhost00 vhost00.divms.uiowa.edu a-lnx010 a-lnx010.divms.uiowa.edu
+        VisualHostKey no
+        ForwardX11Trusted no
+        ForwardAgent no
+
+{%- if hostname not in ["beast", "yendor"] %}
+
+Match final Host *.crashland !host beast,beast.crashland,yendor,yendor.crashland !localnetwork 172.29.254.0/24
+         ProxyJump yendor.crashland
+{%- endif %}
+
+
+Host *.uiowa.edu
+        User accx
+        ForwardAgent yes
+
+Host *.crashland
+        User spin
+        ForwardAgent yes
+
+Host *
+        Protocol 2
+	ForwardX11 yes
+        Compression yes
+        ControlPath ~/.ssh/.control-%C
+        ControlMaster auto
+        ControlPersist 240m
+        NoHostAuthenticationForLocalhost yes
+        ServerAliveInterval 300
+        # I do not think campus works here, at least not off campus:
+        CanonicalDomains divms.uiowa.edu campus.divms.uiowa.edu
+        CanonicalizeHostname no
+        HashKnownHosts no
+        GSSAPIAuthentication yes
+        GSSAPIDelegateCredentials yes
+{%- if hostname in ["LAA-M092", "CS-M064"] %}
+	IdentityAgent /Users/accx/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
+        CertificateFile ~/.ssh/id_ecdsa-cert.pub
+        PreferredAuthentications publickey,gssapi-with-mic,keyboard-interactive,password
+{%- else %}
+        PreferredAuthentications gssapi-with-mic,publickey,keyboard-interactive,password
+{%- endif %}
