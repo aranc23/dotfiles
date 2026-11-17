@@ -1,5 +1,0 @@
-{
-  "plugin": [
-    "org-mcp-server@git+https://github.com/szaffarano/org-mcp-server.git"
-  ]
-}

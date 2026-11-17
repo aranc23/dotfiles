@@ -144,10 +144,12 @@ fi
 
 export NETHACKOPTIONS='!autopickup,color,name:Manshoon,fruit:wacky fruit,catname:Al,dogname:Elektra,female,horsename:Trotter,showexp,time'
 
-if [[ "${TERM}" != "dumb" && "${TERM}" != "linux" ]]; then
-    if which oh-my-posh >/dev/null 2>/dev/null; then
-        eval "$( oh-my-posh init bash --config ~/.poshthemes/tokyo.omp.json )"
+if [[ "${TERM}" == "xterm-kitty" ]]; then
+    posh=$(which oh-my-posh 2>/dev/null)
+    if [[ -x $posh ]]; then
+        eval "$( $posh init bash --config ~/.poshthemes/tokyo.omp.json )"
     fi
+    unset posh
 fi
 
 # try to limit noise from this library:

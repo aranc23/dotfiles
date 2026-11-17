@@ -1,7 +1,0 @@
-[tools]
-claude = "latest"
-[settings]
-disable_tools = ["opencode", "agy"]
-[dotfiles]
-"~/.claude.json/gitlab" = { source = "gitlab-uiowa.json", merge = true, format = "json", template = "tera" }
-"~/.claude/settings.json/org" = { source = "plugin-org-mcp-server.json", merge = true, format = "json" }

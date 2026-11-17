@@ -1,5 +1,0 @@
-[dotfiles]
-"~/.config/systemd/user/dev.mise.mise-history.service.d/keychain.conf" = { mode = "track" }
-[tools]
-"github:Foxboron/age-plugin-tpm" = "latest"
-"github:danielrobbins/keychain" = { version = "latest", asset_pattern = "keychain-*.pyz", bin = "keychain" }
