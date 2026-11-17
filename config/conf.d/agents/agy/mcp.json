@@ -3,17 +3,18 @@
     "gitea-mcp": {
       "command": "gitea-mcp",
       "env": {
-        "GITEA_URL": "{{ secret(name="GITEA_HOST") }}",
-        "GITEA_TOKEN": "{{ env.GITEA_ACCESS_TOKEN }}",
-        "GITEA_ACCESS_TOKEN": "{{ env.GITEA_ACCESS_TOKEN }}"
+        "GITEA_URL": "{{ env.GITEA_HOST"
       }
-    },
-    "github": {
-      "serverUrl": "https://api.githubcopilot.com/mcp/",
-      "headers": {
-        "Authorization": "Bearer {{ env.GITHUB_PAT }}"
-      },
-      "disabled": false
-    }
+    }","GITEA_TOKEN": "{{ env.GITEA_ACCESS_TOKEN }}",
+    "GITEA_ACCESS_TOKEN": "{{ env.GITEA_ACCESS_TOKEN }}"
   }
+},
+"github": {
+  "serverUrl": "https://api.githubcopilot.com/mcp/",
+  "headers": {
+    "Authorization": "Bearer {{ env.GITHUB_PAT }}"
+  },
+  "disabled": false
+}
+}
 }
