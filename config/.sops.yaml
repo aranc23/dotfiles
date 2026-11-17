@@ -1,0 +1,48 @@
+---
+# these should be tpm keys from beast, benway, a-lnx005
+# should add one from lazarus?
+# yubikey from home key, presumably
+# non-tpm non-yubi key is stored in 1p as a fallback
+creation_rules:
+  - path_regex: ^(minio34.*\.yaml|b2-restic-spin.env|wintermute.+yaml)$
+    age: >-
+      age1tag1qtzl736p8xvckz8rueymfzrcgm0zsxtxs7fswn3y8c294tqgx7022hvzyd7,
+      age1tpm1q2a4rd64ydtzam7fk4tpa23x84txkvm5n578j2fp5pjkuan2y377yztekjv,
+      age1tpm1q0aamhv6vktuy5cpcwlcgxh47z95f7yx9adnywa04nwhmvwmzetdueq7tw4,
+      age1kcg2k2gua490zf34p9kqhpry9ln9xjgsmrafxcjthg063jg8dycs9sdqun
+
+  - path_regex: .*\.(yaml|env|yml)$
+    age: >-
+      age1tag1qtzl736p8xvckz8rueymfzrcgm0zsxtxs7fswn3y8c294tqgx7022hvzyd7,
+      age1tpm1q2a4rd64ydtzam7fk4tpa23x84txkvm5n578j2fp5pjkuan2y377yztekjv,
+      age1tag1q2wwqy2zkxzahxl0q9ypxzcta8pja62wutqvfrwjptn98k6f5d5sv830r3t,
+      age1tpm1q0aamhv6vktuy5cpcwlcgxh47z95f7yx9adnywa04nwhmvwmzetdueq7tw4,
+      age1kcg2k2gua490zf34p9kqhpry9ln9xjgsmrafxcjthg063jg8dycs9sdqun
+
+# a-lnx005 old keys, no longer avail:
+# age1tpm1q080puhe4hd7gm2up64n8ja54gm7u8xth9ygfmlamdcc0ygwv58es4qacyw
+# age1tpm1qwppy04yxeud2s5k09w0s9cuxtssfszjjd9fvyasqzwtfj03x7kcvar9kqp
+# age1tpm1qvpzkff0x0j9prdmavr4ywz550fp9ya0kphch6euxnqf0l2w6gq9zprvr46
+# age1tag1qt2ltj8hp43x4zunkwvxn4mlenw4wt4d426tzvm3xvm9avtsum6ls037zhz
+# this key is sus, cannot find an identify file containing it:
+# age1tpm1qdqgkc3scjc998xu8c0fdcajj6vymsl0cu7p0264g4wkpdeu3wjj6y3ttmt
+# benway old key:
+# age1tpm1qwnry6q9k6sc0vk05znygr2cwju093fxs73hu7ev43geeqmt72tj64cxp9s
+
+# beast key, unused?:
+# age1wlrlp95yngftulfsu7n9esvvjwhl90mlg0p8wt9jegwyclmptvrskhdnt2
+# broken? tpm key from lazarus
+# age1tpm1qdk6utc8k5p68hhqd66lu3mugakr6xeym8hymwe94wh6h5ved9xljnxswfz
+
+# a-lnx005:
+# age1tag1q2wwqy2zkxzahxl0q9ypxzcta8pja62wutqvfrwjptn98k6f5d5sv830r3t
+# benway:
+# age1tag1qtzl736p8xvckz8rueymfzrcgm0zsxtxs7fswn3y8c294tqgx7022hvzyd7
+# beast:
+# age1tpm1q2a4rd64ydtzam7fk4tpa23x84txkvm5n578j2fp5pjkuan2y377yztekjv
+# emergency fallback from 1p
+# age1kcg2k2gua490zf34p9kqhpry9ln9xjgsmrafxcjthg063jg8dycs9sdqun
+# home yubikey, created on lazarus, cannot get it to work doesn't like my pin
+# age1yubikey1qw02nuyrl6mp5wgqzcy6h7rl2wj8xfaj948dntwg0pe9njry2u90yy9c7lx
+# lazarus tpm:
+# age1tpm1q0aamhv6vktuy5cpcwlcgxh47z95f7yx9adnywa04nwhmvwmzetdueq7tw4
