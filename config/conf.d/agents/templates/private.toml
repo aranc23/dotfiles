@@ -3,4 +3,3 @@ GITLAB_PERSONAL_ACCESS_TOKEN = "{{ secret(name='gitlab_personal_access_token') }
 GITEA_HOST = "{{ secret(name='gitea_host') }}"
 GITEA_ACCESS_TOKEN = "{{ secret(name='gitea_access_token') }}"
 GITHUB_PAT = "{{ secret(name='github_pat') }}"
-
