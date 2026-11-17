@@ -116,6 +116,12 @@
       "variants": []
     },
     {
+      "path": "home/Library/LaunchAgents/com.user.org-sync.plist",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
       "path": "home/bin/diskuser",
       "autosave": true,
       "encrypt": false,
@@ -236,6 +242,8 @@
     "home/.ssh/crashland.sh": 448,
     "home/.ssh/mac-test-net.sh": 448,
     "home/.tmux.conf": 384,
+    "home/Library": 448,
+    "home/Library/LaunchAgents": 509,
     "home/bin": 448,
     "home/bin/keychaintmux": 448,
     "home/bin/org-sync": 488
