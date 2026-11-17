@@ -51,11 +51,6 @@ case "$(hostname -s)" in
         ;;
 esac
 
-if which eza >/dev/null 2>&1 ; then
-    alias ls='eza --group --icons=always'
-    alias lsold='ls -sold -lr'
-fi
-
 if which pulp >/dev/null 2>&1 ; then
     eval "$(_PULP_COMPLETE=source_bash pulp)"
     export PULP_CLI_PROFILE=mirrors
