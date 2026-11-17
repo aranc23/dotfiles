@@ -2,6 +2,7 @@
 idiomatic_version_file_enable_tools = ["ruby"]
 age.key_file = "~/.config/mise/age.txt"
 sops.age_key_file = "~/.config/mise/age.txt"
+sops.rops = false
 [settings.history]
 allow_plaintext_history = true
 [bootstrap.services.mise-history]
