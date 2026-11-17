@@ -5,7 +5,7 @@
       "env": {
         "GITEA_URL": "{{ env.GITEA_HOST }}",
         "GITEA_TOKEN": "{{ env.GITEA_ACCESS_TOKEN }}",
-        "GITEA_ACCESS_TOKEN": "{{ env.GITEA_ACCESS_TOKEN }}"
+        "GITEA_ACCESS_TOKEN": "{{ env.GITEA_ACCESS_TOKEN }"
       }
     },
     "github": {
