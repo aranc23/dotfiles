@@ -1,0 +1,6 @@
+#! /bin/bash
+
+for inst in $(lxc ls -f json|jq -r ".[] | .name"); do
+	lxc config set $inst snapshots.expiry 7d
+	lxc snapshot $inst $(date +%FT%T)
+done

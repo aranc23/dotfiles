@@ -1,0 +1,31 @@
+#! /bin/bash
+
+key_desc="${KEY_DESC:-vault-token-helper}"
+
+if [[ $1 == 'get' ]]; then
+    key_id=$(keyctl search @u user $key_desc)
+    if [[ $? != 0 ]]; then
+        logger -s -t $(basename $0) "unable to find key"
+        exit 1
+    fi
+    exec keyctl pipe $key_id
+elif [[ $1 == 'store' ]]; then
+    # ignore the error output looking for the key
+    key_id=$(keyctl search @u user $key_desc 2>/dev/null)
+    if [[ $? != 0 ]]; then
+        # throw away the key id
+	key_id=$(keyctl padd user $key_desc @u)
+	exec keyctl setperm $key_id 0x3f0f0000
+    fi
+    exec keyctl pupdate $key_id
+elif [[ $1 == 'erase' ]]; then
+    key_id=$(keyctl search @u user $key_desc)
+    if [[ $? != 0 ]]; then
+        logger -s -t $(basename $0) "unable to find key"
+        exit 1
+    fi
+    exec keyctl unlink $key_id @u
+else
+    logger -s -t $(basename $0) "invalid command given: ${1}"
+    exit 1
+fi

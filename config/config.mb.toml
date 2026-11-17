@@ -1,0 +1,5 @@
+[dotfiles]
+"~/Library/LaunchAgents/com.user.org-sync.plist" = { mode = "track" }
+"~/bin/org-sync" = { mode = "track" }
+[tools]
+watchexec = "latest"

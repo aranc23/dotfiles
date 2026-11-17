@@ -1,0 +1,3 @@
+#! /bin/bash
+cd ~/src/puppet-editor-services &&      
+    exec bundle exec ruby ./puppet-languageserver --debug=stdout -p 9002 -c --puppet-version 8.10.0 -t 0

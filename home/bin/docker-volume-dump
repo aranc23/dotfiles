@@ -1,0 +1,7 @@
+#! /bin/bash
+
+for vol in $(docker volume ls --format json | jq -r 'select(.Driver == "local") | .Name'); do
+    docker run --rm --name docker-volume-dump -v "${vol}:/mnt/${vol}" ubuntu-plus tar cfC - "/mnt/${vol}" . | zstd -c -v > "${vol}.tar.zst"
+done
+
+           

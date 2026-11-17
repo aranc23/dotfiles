@@ -1,0 +1,65 @@
+#! /usr/bin/perl
+
+use strict;
+use warnings;
+
+use Getopt::Long;
+
+use IO::Handle;
+STDERR->autoflush(1);
+STDOUT->autoflush(1);
+
+our $SORT=0;
+our $HUMAN=0;
+
+our %D;
+
+GetOptions(
+           's|sort'  => \$SORT,
+           'h|human' => \$HUMAN,
+          );
+
+if(@ARGV == 0) {
+  push(@ARGV,'.');
+}
+foreach my $dir (@ARGV) {
+  chdir($dir) or die "unable to chdir to $dir";
+  foreach my $ln (`find . -xdev -maxdepth 1 \! -name . \! -name .. \\\( -type d -o -type f \\\) -exec du -ksx \"{}\" \\\;`) {
+    chomp($ln);
+    unless($ln =~ /^(\d+)\s+(.+)/) {
+      warn "unable to parse this line: $ln";
+      next;
+    }
+    my ($s,$f)=($1,$2);
+    $f =~ s/^\.\///;
+    if($SORT) {
+      $D{$f}=$s;
+    } else {
+      if($HUMAN) {
+        print humanize($s)."\t$f\n";
+      } else {
+        print $ln."\n";
+      }
+    }
+  }
+}
+
+if($SORT) {
+  foreach my $f (sort { $D{$a} <=> $D{$b} } (keys(%D))) {
+    my $s=$D{$f};
+    if($HUMAN) {
+      print humanize($s)."\t".$f."\n";
+    } else {
+      print "$s\t$f\n";
+    }
+  }
+}
+sub humanize {
+  my $s=$_[0];
+  for(qw(K M G T)) {
+    if($s<1024) {
+      return sprintf("%.1f%s",$s,$_);
+    };
+    $s=$s/1024;
+  }
+}

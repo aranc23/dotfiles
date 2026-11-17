@@ -1,0 +1,9 @@
+#! /bin/bash
+
+dest="${1:-$(hostname -s)}"
+for inst in $(lxc ls -f json|jq -r ".[] | select(.status == \"Running\") | select(.location != \"${dest}\") | .name"); do
+    if echo $inst | grep -P -q '^bao'; then
+	continue
+    fi
+    (flock -w 60 9 || continue; lxc stop $inst -v && lxc move $inst --target $dest -v && lxc start $inst -v) 9>~/run/lxc-"${inst}".lock
+done

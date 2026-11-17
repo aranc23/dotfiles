@@ -1,0 +1,7 @@
+#! /bin/bash
+
+dest="${1:-$(hostname -s)}"
+for inst in $(lxc ls -f json|jq -r ".[] | .name"); do
+    flock -w 120 ~/run/lxc-"${inst}".lock lxc export $inst "/ar/backups/lxc/${inst}.tar" --compression none --optimized-storage
+done
+zfs snapshot ar/backups/lxc@lxc-exporter-$(date +%FT%T)

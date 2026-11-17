@@ -1,0 +1,225 @@
+{
+  "format": 1,
+  "enrollment": [
+    {
+      "path": "config",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/.bao",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/.bash_logout",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/.bash_profile",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/.bashrc",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/.config/kitty/kitty.conf",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/.config/systemd/user/dev.mise.mise-history.service.d/keychain.conf",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/.config/systemd/user/org-sync.service",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/.config/zellij/config.kdl",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/.muttrc",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/.notmuch-config",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/.perltidyrc",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/.poshthemes/tokyo.omp.json",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/.ssh/campus.sh",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/.ssh/crashland.sh",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/.ssh/mac-test-net.sh",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/.tmux.conf",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/bin/diskuser",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/bin/docker-volume-dump",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/bin/git-prompt.sh",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/bin/keychaintmux",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/bin/keyctl-token-helper",
+      "autosave": true,
+      "encrypt": false,
+      "allow_plaintext": true,
+      "variants": []
+    },
+    {
+      "path": "home/bin/lxc-exporter",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/bin/lxc-mover",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/bin/lxc-snapper",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/bin/org-sync",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/bin/privoxy.env",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/bin/rekey.rb",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/bin/start-puppet-editor-services",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    }
+  ],
+  "exclude": [
+    "**/*.swp",
+    "**/*~",
+    "**/#*#",
+    "**/.#*",
+    "~/.config/mise/config.local.toml",
+    "~/.config/mise/*.local.toml",
+    "/home/spin/.mise/config/age.txt"
+  ],
+  "recipients": [],
+  "permissions": {
+    "config/conf.d": 509,
+    "config/conf.d/agents": 448,
+    "config/conf.d/agents/agy": 448,
+    "config/conf.d/agents/opencode": 448,
+    "config/conf.d/claude": 448,
+    "config/conf.d/sops": 448,
+    "config/conf.d/sops/mise.toml": 384,
+    "config/conf.d/ssh": 448,
+    "config/conf.d/ssh/mise.toml": 384,
+    "config/conf.d/zfs": 448,
+    "config/conf.d/zfs/mise.toml": 384,
+    "config/config.ag.toml": 436,
+    "config/config.toml": 384,
+    "config/dotfiles": 509,
+    "config/dotfiles/.gitkeep": 384,
+    "home/.bao": 384,
+    "home/.bash_profile": 384,
+    "home/.config": 448,
+    "home/.config/kitty": 448,
+    "home/.config/systemd": 509,
+    "home/.config/systemd/user": 509,
+    "home/.config/systemd/user/dev.mise.mise-history.service.d": 509,
+    "home/.config/zellij": 509,
+    "home/.perltidyrc": 384,
+    "home/.poshthemes": 509,
+    "home/.ssh": 448,
+    "home/.ssh/campus.sh": 448,
+    "home/.ssh/crashland.sh": 448,
+    "home/.ssh/mac-test-net.sh": 448,
+    "home/.tmux.conf": 384,
+    "home/bin": 448,
+    "home/bin/keychaintmux": 448,
+    "home/bin/org-sync": 488
+  }
+}

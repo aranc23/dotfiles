@@ -1,0 +1,5 @@
+[dotfiles]
+"~/.ssh/campus.sh" = { mode = "track" }
+"~/.ssh/config" = { source = "ssh_config.tera", mode = "template", permissions="0600" }
+"~/.ssh/crashland.sh" = { mode = "track" }
+"~/.ssh/mac-test-net.sh" = { mode = "track" }

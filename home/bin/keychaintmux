@@ -1,0 +1,14 @@
+#! /bin/bash
+
+# goal: launch an ssh-agent not managed by any other process to use in
+# tmux forever
+
+# no inherit means ignore environment variables, use what's in the
+# .keychain directory or if it's not running then create an ssh-agent
+# could use --host tmux-$(hostname -s) to avoid conflicting with other invocations
+eval $( keychain --eval --noinherit )
+
+# start in home directory please:
+cd
+# become tmux
+exec tmux attach -d $@
