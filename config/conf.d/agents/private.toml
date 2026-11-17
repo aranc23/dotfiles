@@ -1,0 +1,6 @@
+[env]
+GITLAB_PERSONAL_ACCESS_TOKEN = "{{ secret(name='gitlab_personal_access_token') }}"
+GITEA_HOST = "{{ secret(name='gitea_host') }}"
+GITEA_ACCESS_TOKEN = "{{ secret('gitea_access_token') }}"
+GITHUB_PAT = "{{ secret('GITHUB_PAT') }}"
+
