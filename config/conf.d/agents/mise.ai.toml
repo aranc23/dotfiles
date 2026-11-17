@@ -7,7 +7,7 @@ disable_tools = ["claude"]
 [dotfiles]
 "~/.config/opencode/opencode.json/org" = { source = "plugin-org-mcp-server-opencode.json", merge = true, format = "json" }
 "~/.config/opencode/opencode.json/mcp" = { source = "opencode/mcp-git.json", merge = true, format = "json" }
-"~/.gemini/config/mcp_config.json/mcp" = { source = "agy/mcp.json", merge = "missing", format = "json", template = "tera", permissions = "0600" }
+"~/.gemini/config/mcp_config.json/mcp" = { source = "agy/mcp.json", merge = true, format = "json", template = "tera", permissions = "0600" }
 "~/.config/mise/conf.d/git.local.toml/seed" = { source = "templates/private.toml", template = "tera", merge = "missing", permissions = "0600" }
 [bootstrap.secrets]
 gitlab_personal_access_token = "GITLAB_PERSONAL_ACCESS_TOKEN"
