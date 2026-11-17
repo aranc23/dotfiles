@@ -5,7 +5,7 @@
       "env": {
         "GITEA_URL": "{{ exec(command='sops decrypt --output-type json ~/sops/git-tokens.env | jq -r .GITEA_HOST') | trim }}",
         "GITEA_TOKEN": "{{ exec(command='sops decrypt --output-type json ~/sops/git-tokens.env | jq -r .GITEA_ACCESS_TOKEN') | trim  }}",
-        "GITEA_ACCESS_TOKEN": "{{ env.GITEA_ACCESS_TOKEN }}"
+        "GITEA_ACCESS_TOKEN": "{{ exec(command='sops decrypt --output-type json ~/sops/git-tokens.env | jq -r .GITEA_ACCESS_TOKEN') | trim  }}"
       }
     },
     "github": {
