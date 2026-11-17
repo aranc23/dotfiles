@@ -11,7 +11,7 @@
     "github": {
       "serverUrl": "https://api.githubcopilot.com/mcp/",
       "headers": {
-        "Authorization": "Bearer {{ env.GITHUB_PAT }}"
+        "Authorization": "Bearer {{ exec(command='mise env --json | jq -r .GITHUB_PAT') | trim }}"
       },
       "disabled": false
     }
