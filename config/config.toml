@@ -64,3 +64,6 @@ exclude = ["**/*.swp", "**/*~", "**/#*#", "**/.#*", "~/.config/mise/config.local
 [history.encryption]
 recipients = ["age1tag1qtzl736p8xvckz8rueymfzrcgm0zsxtxs7fswn3y8c294tqgx7022hvzyd7","age1tag1q2wwqy2zkxzahxl0q9ypxzcta8pja62wutqvfrwjptn98k6f5d5sv830r3t","age1kcg2k2gua490zf34p9kqhpry9ln9xjgsmrafxcjthg063jg8dycs9sdqun"]
 
+[env]
+MISE_SOPS_AGE_KEY_FILE = "~/.config/mise/age.txt"
+_.file = ".env.env"
