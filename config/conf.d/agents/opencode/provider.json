@@ -1,0 +1,1456 @@
+{%- set hostname = exec(command="hostname -s") | trim -%}
+{%- if hostname == "a-lnx005" -%}
+{
+  "provider": {
+    "barracuda": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "llama.cpp - barracuda",
+      "options": {
+        "baseURL": "http://barracuda.divms.uiowa.edu:8000/v1",
+        "apiKey": "jaidByequiopMuasigjugNanBi"
+      },
+      "models": {
+        "bge-reranker-v2-m3": {
+          "id": "bge-reranker-v2-m3"
+        },
+        "gemma-4-26B-A4B-it-GGUF": {
+          "id": "gemma-4-26B-A4B-it-GGUF",
+          "contextWindow": 65536
+        },
+        "gemma-4-26B-A4B-it-GGUF-ti-128k": {
+          "id": "gemma-4-26B-A4B-it-GGUF-ti-128k",
+          "contextWindow": 131072
+        },
+        "gemma-4-E4B-it:Q6_K": {
+          "id": "gemma-4-E4B-it:Q6_K",
+          "contextWindow": 65536
+        },
+        "GLM-4.5-Air": {
+          "id": "GLM-4.5-Air"
+        },
+        "gpt-oss-120b": {
+          "id": "gpt-oss-120b",
+          "contextWindow": 65536
+        },
+        "Ministral-8B-Instruct-2410-Q6": {
+          "id": "Ministral-8B-Instruct-2410-Q6"
+        },
+        "nomic-embed-text-v2-moe": {
+          "id": "nomic-embed-text-v2-moe"
+        },
+        "Osmosis-Apply-1.7B": {
+          "id": "Osmosis-Apply-1.7B"
+        },
+        "Q3.5-9B-UA": {
+          "id": "Q3.5-9B-UA",
+          "contextWindow": 131072
+        },
+        "qwen2.5-coder-7b-fim": {
+          "id": "qwen2.5-coder-7b-fim",
+          "contextWindow": 4096
+        },
+        "Qwen2.5.1-C7BI-Q6_K-ti": {
+          "id": "Qwen2.5.1-C7BI-Q6_K-ti",
+          "contextWindow": 16384
+        },
+        "Qwen3.5-122B-A10B-UD-IQ4_NL": {
+          "id": "Qwen3.5-122B-A10B-UD-IQ4_NL",
+          "contextWindow": 131072
+        },
+        "Qwen3.5-122B-A10B-UD-Q4_K_XL": {
+          "id": "Qwen3.5-122B-A10B-UD-Q4_K_XL",
+          "contextWindow": 65536
+        },
+        "Qwen3.5-122B-A10B-UD-Q4_K_XL-gemini": {
+          "id": "Qwen3.5-122B-A10B-UD-Q4_K_XL-gemini",
+          "contextWindow": 131072
+        },
+        "Qwen3.5-9B-Q6_K": {
+          "id": "Qwen3.5-9B-Q6_K",
+          "contextWindow": 32768
+        },
+        "Qwen3.6-35B-A3B-GGUF-256k": {
+          "id": "Qwen3.6-35B-A3B-GGUF-256k",
+          "contextWindow": 262144
+        },
+        "Qwen3.6-35B-A3B-ti-128k": {
+          "id": "Qwen3.6-35B-A3B-ti-128k",
+          "contextWindow": 131072
+        },
+        "Qwen3.8-27B-GGUF-256k": {
+          "id": "Qwen3.8-27B-GGUF-256k",
+          "contextWindow": 262144
+        }
+      }
+    },
+    "benway": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "llama.cpp - benway",
+      "options": {
+        "baseURL": "http://benway.crashland:8000/v1",
+        "apiKey": "loafNigVeedWifAfFaTwionJon"
+      },
+      "models": {
+        "bge-reranker-v2-m3": {
+          "id": "bge-reranker-v2-m3"
+        },
+        "gemma-4-26B-A4B-it-GGUF-xt-128k": {
+          "id": "gemma-4-26B-A4B-it-GGUF-xt-128k",
+          "contextWindow": 131072
+        },
+        "gemma-4-E4B-it:Q6_K": {
+          "id": "gemma-4-E4B-it:Q6_K",
+          "contextWindow": 65536
+        },
+        "gpt-oss-20b-Q4_K_M-32k": {
+          "id": "gpt-oss-20b-Q4_K_M-32k",
+          "contextWindow": 32768
+        },
+        "Ministral-8B-Instruct-2410-Q6": {
+          "id": "Ministral-8B-Instruct-2410-Q6"
+        },
+        "nomic-embed-text-v2-moe": {
+          "id": "nomic-embed-text-v2-moe"
+        },
+        "Osmosis-Apply-1.7B": {
+          "id": "Osmosis-Apply-1.7B"
+        },
+        "Q3.5-9B-UA": {
+          "id": "Q3.5-9B-UA",
+          "contextWindow": 131072
+        },
+        "qwen2.5-coder-7b-fim": {
+          "id": "qwen2.5-coder-7b-fim",
+          "contextWindow": 4096
+        },
+        "Qwen2.5.1-C7BI-Q8_0": {
+          "id": "Qwen2.5.1-C7BI-Q8_0",
+          "contextWindow": 32768
+        },
+        "Qwen3.5-9B-Q8_0-64k": {
+          "id": "Qwen3.5-9B-Q8_0-64k",
+          "contextWindow": 65536
+        },
+        "Qwen3.6-35B-A3B-xt-32k": {
+          "id": "Qwen3.6-35B-A3B-xt-32k",
+          "contextWindow": 32768
+        }
+      }
+    },
+    "alien": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "llama.cpp - alien",
+      "options": {
+        "baseURL": "http://alien.divms.uiowa.edu:8000/v1",
+        "apiKey": "fignijovtikUkIgPobveptyeycsyomceasCi"
+      },
+      "models": {
+        "bge-reranker-v2-m3": {
+          "id": "bge-reranker-v2-m3"
+        },
+        "gemma-4-26B-A4B-it-GGUF-ti-128k": {
+          "id": "gemma-4-26B-A4B-it-GGUF-ti-128k",
+          "contextWindow": 131072
+        },
+        "gemma-4-E4B-it:Q6_K": {
+          "id": "gemma-4-E4B-it:Q6_K",
+          "contextWindow": 65536
+        },
+        "Ministral-8B-Instruct-2410-Q6": {
+          "id": "Ministral-8B-Instruct-2410-Q6"
+        },
+        "nomic-embed-text-v2-moe": {
+          "id": "nomic-embed-text-v2-moe"
+        },
+        "Osmosis-Apply-1.7B": {
+          "id": "Osmosis-Apply-1.7B"
+        },
+        "Q3.5-9B-UA": {
+          "id": "Q3.5-9B-UA",
+          "contextWindow": 131072
+        },
+        "qwen2.5-coder-7b-fim": {
+          "id": "qwen2.5-coder-7b-fim",
+          "contextWindow": 4096
+        },
+        "Qwen2.5.1-C7BI-Q6_K-ti": {
+          "id": "Qwen2.5.1-C7BI-Q6_K-ti",
+          "contextWindow": 16384
+        },
+        "Qwen3.5-9B-Q6_K": {
+          "id": "Qwen3.5-9B-Q6_K",
+          "contextWindow": 32768
+        },
+        "Qwen3.6-35B-A3B-ti-128k": {
+          "id": "Qwen3.6-35B-A3B-ti-128k",
+          "contextWindow": 131072
+        }
+      }
+    },
+    "a-lnx005": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "llama.cpp - a-lnx005",
+      "options": {
+        "baseURL": "http://localhost:8000/v1",
+        "apiKey": "saftipCobatNoofHeughPapnop"
+      },
+      "models": {
+        "bge-reranker-v2-m3": {
+          "id": "bge-reranker-v2-m3"
+        },
+        "gemma-4-E4B-it:Q4_K_M": {
+          "id": "gemma-4-E4B-it:Q4_K_M",
+          "contextWindow": 32768
+        },
+        "Ministral-8B-Instruct-2410-Q4": {
+          "id": "Ministral-8B-Instruct-2410-Q4"
+        },
+        "nomic-embed-text-v2-moe": {
+          "id": "nomic-embed-text-v2-moe"
+        },
+        "Osmosis-Apply-1.7B": {
+          "id": "Osmosis-Apply-1.7B"
+        },
+        "Q3.5-9B-UA": {
+          "id": "Q3.5-9B-UA",
+          "contextWindow": 131072
+        },
+        "qwen2.5-coder-7b-fim": {
+          "id": "qwen2.5-coder-7b-fim",
+          "contextWindow": 4096
+        },
+        "Qwen2.5.1-C7BI-IQ4_XS": {
+          "id": "Qwen2.5.1-C7BI-IQ4_XS",
+          "contextWindow": 8192
+        },
+        "Qwen3.5-9B-Q4_K_M": {
+          "id": "Qwen3.5-9B-Q4_K_M",
+          "contextWindow": 131072
+        },
+        "Qwen3.6-35B-A3B-128k": {
+          "id": "Qwen3.6-35B-A3B-128k",
+          "contextWindow": 131072
+        }
+      }
+    }
+  }
+}
+{%- elif hostname == "benway" -%}
+{
+  "provider": {
+    "a-lnx005": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "llama.cpp - a-lnx005",
+      "options": {
+        "baseURL": "http://a-lnx005.divms.uiowa.edu:8000/v1",
+        "apiKey": "saftipCobatNoofHeughPapnop"
+      },
+      "models": {
+        "bge-reranker-v2-m3": {
+          "id": "bge-reranker-v2-m3"
+        },
+        "gemma-4-E4B-it:Q4_K_M": {
+          "id": "gemma-4-E4B-it:Q4_K_M",
+          "contextWindow": 32768
+        },
+        "Ministral-8B-Instruct-2410-Q4": {
+          "id": "Ministral-8B-Instruct-2410-Q4"
+        },
+        "nomic-embed-text-v2-moe": {
+          "id": "nomic-embed-text-v2-moe"
+        },
+        "Osmosis-Apply-1.7B": {
+          "id": "Osmosis-Apply-1.7B"
+        },
+        "Q3.5-9B-UA": {
+          "id": "Q3.5-9B-UA",
+          "contextWindow": 131072
+        },
+        "qwen2.5-coder-7b-fim": {
+          "id": "qwen2.5-coder-7b-fim",
+          "contextWindow": 4096
+        },
+        "Qwen2.5.1-C7BI-IQ4_XS": {
+          "id": "Qwen2.5.1-C7BI-IQ4_XS",
+          "contextWindow": 8192
+        },
+        "Qwen3.5-9B-Q4_K_M": {
+          "id": "Qwen3.5-9B-Q4_K_M",
+          "contextWindow": 131072
+        },
+        "Qwen3.6-35B-A3B-128k": {
+          "id": "Qwen3.6-35B-A3B-128k",
+          "contextWindow": 131072
+        }
+      }
+    },
+    "barracuda": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "llama.cpp - barracuda",
+      "options": {
+        "baseURL": "http://barracuda.divms.uiowa.edu:8000/v1",
+        "apiKey": "jaidByequiopMuasigjugNanBi"
+      },
+      "models": {
+        "bge-reranker-v2-m3": {
+          "id": "bge-reranker-v2-m3"
+        },
+        "gemma-4-26B-A4B-it-GGUF": {
+          "id": "gemma-4-26B-A4B-it-GGUF",
+          "contextWindow": 65536
+        },
+        "gemma-4-26B-A4B-it-GGUF-ti-128k": {
+          "id": "gemma-4-26B-A4B-it-GGUF-ti-128k",
+          "contextWindow": 131072
+        },
+        "gemma-4-E4B-it:Q6_K": {
+          "id": "gemma-4-E4B-it:Q6_K",
+          "contextWindow": 65536
+        },
+        "GLM-4.5-Air": {
+          "id": "GLM-4.5-Air"
+        },
+        "gpt-oss-120b": {
+          "id": "gpt-oss-120b",
+          "contextWindow": 65536
+        },
+        "Ministral-8B-Instruct-2410-Q6": {
+          "id": "Ministral-8B-Instruct-2410-Q6"
+        },
+        "nomic-embed-text-v2-moe": {
+          "id": "nomic-embed-text-v2-moe"
+        },
+        "Osmosis-Apply-1.7B": {
+          "id": "Osmosis-Apply-1.7B"
+        },
+        "Q3.5-9B-UA": {
+          "id": "Q3.5-9B-UA",
+          "contextWindow": 131072
+        },
+        "qwen2.5-coder-7b-fim": {
+          "id": "qwen2.5-coder-7b-fim",
+          "contextWindow": 4096
+        },
+        "Qwen2.5.1-C7BI-Q6_K-ti": {
+          "id": "Qwen2.5.1-C7BI-Q6_K-ti",
+          "contextWindow": 16384
+        },
+        "Qwen3.5-122B-A10B-UD-IQ4_NL": {
+          "id": "Qwen3.5-122B-A10B-UD-IQ4_NL",
+          "contextWindow": 131072
+        },
+        "Qwen3.5-122B-A10B-UD-Q4_K_XL": {
+          "id": "Qwen3.5-122B-A10B-UD-Q4_K_XL",
+          "contextWindow": 65536
+        },
+        "Qwen3.5-122B-A10B-UD-Q4_K_XL-gemini": {
+          "id": "Qwen3.5-122B-A10B-UD-Q4_K_XL-gemini",
+          "contextWindow": 131072
+        },
+        "Qwen3.5-9B-Q6_K": {
+          "id": "Qwen3.5-9B-Q6_K",
+          "contextWindow": 32768
+        },
+        "Qwen3.6-35B-A3B-GGUF-256k": {
+          "id": "Qwen3.6-35B-A3B-GGUF-256k",
+          "contextWindow": 262144
+        },
+        "Qwen3.6-35B-A3B-ti-128k": {
+          "id": "Qwen3.6-35B-A3B-ti-128k",
+          "contextWindow": 131072
+        },
+        "Qwen3.8-27B-GGUF-256k": {
+          "id": "Qwen3.8-27B-GGUF-256k",
+          "contextWindow": 262144
+        }
+      }
+    },
+    "benway": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "llama.cpp - benway",
+      "options": {
+        "baseURL": "http://localhost:8000/v1",
+        "apiKey": "loafNigVeedWifAfFaTwionJon"
+      },
+      "models": {
+        "bge-reranker-v2-m3": {
+          "id": "bge-reranker-v2-m3"
+        },
+        "gemma-4-26B-A4B-it-GGUF-xt-128k": {
+          "id": "gemma-4-26B-A4B-it-GGUF-xt-128k",
+          "contextWindow": 131072
+        },
+        "gemma-4-E4B-it:Q6_K": {
+          "id": "gemma-4-E4B-it:Q6_K",
+          "contextWindow": 65536
+        },
+        "gpt-oss-20b-Q4_K_M-32k": {
+          "id": "gpt-oss-20b-Q4_K_M-32k",
+          "contextWindow": 32768
+        },
+        "Ministral-8B-Instruct-2410-Q6": {
+          "id": "Ministral-8B-Instruct-2410-Q6"
+        },
+        "nomic-embed-text-v2-moe": {
+          "id": "nomic-embed-text-v2-moe"
+        },
+        "Osmosis-Apply-1.7B": {
+          "id": "Osmosis-Apply-1.7B"
+        },
+        "Q3.5-9B-UA": {
+          "id": "Q3.5-9B-UA",
+          "contextWindow": 131072
+        },
+        "qwen2.5-coder-7b-fim": {
+          "id": "qwen2.5-coder-7b-fim",
+          "contextWindow": 4096
+        },
+        "Qwen2.5.1-C7BI-Q8_0": {
+          "id": "Qwen2.5.1-C7BI-Q8_0",
+          "contextWindow": 32768
+        },
+        "Qwen3.5-9B-Q8_0-64k": {
+          "id": "Qwen3.5-9B-Q8_0-64k",
+          "contextWindow": 65536
+        },
+        "Qwen3.6-35B-A3B-xt-32k": {
+          "id": "Qwen3.6-35B-A3B-xt-32k",
+          "contextWindow": 32768
+        }
+      }
+    }
+  }
+}
+{%- elif hostname == "barracuda" -%}
+{
+  "provider": {
+    "barracuda": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "llama.cpp - barracuda",
+      "options": {
+        "baseURL": "http://localhost:8000/v1",
+        "apiKey": "jaidByequiopMuasigjugNanBi"
+      },
+      "models": {
+        "bge-reranker-v2-m3": {
+          "id": "bge-reranker-v2-m3"
+        },
+        "gemma-4-26B-A4B-it-GGUF": {
+          "id": "gemma-4-26B-A4B-it-GGUF",
+          "contextWindow": 65536
+        },
+        "gemma-4-26B-A4B-it-GGUF-ti-128k": {
+          "id": "gemma-4-26B-A4B-it-GGUF-ti-128k",
+          "contextWindow": 131072
+        },
+        "gemma-4-E4B-it:Q6_K": {
+          "id": "gemma-4-E4B-it:Q6_K",
+          "contextWindow": 65536
+        },
+        "GLM-4.5-Air": {
+          "id": "GLM-4.5-Air"
+        },
+        "gpt-oss-120b": {
+          "id": "gpt-oss-120b",
+          "contextWindow": 65536
+        },
+        "Ministral-8B-Instruct-2410-Q6": {
+          "id": "Ministral-8B-Instruct-2410-Q6"
+        },
+        "nomic-embed-text-v2-moe": {
+          "id": "nomic-embed-text-v2-moe"
+        },
+        "Osmosis-Apply-1.7B": {
+          "id": "Osmosis-Apply-1.7B"
+        },
+        "Q3.5-9B-UA": {
+          "id": "Q3.5-9B-UA",
+          "contextWindow": 131072
+        },
+        "qwen2.5-coder-7b-fim": {
+          "id": "qwen2.5-coder-7b-fim",
+          "contextWindow": 4096
+        },
+        "Qwen2.5.1-C7BI-Q6_K-ti": {
+          "id": "Qwen2.5.1-C7BI-Q6_K-ti",
+          "contextWindow": 16384
+        },
+        "Qwen3.5-122B-A10B-UD-IQ4_NL": {
+          "id": "Qwen3.5-122B-A10B-UD-IQ4_NL",
+          "contextWindow": 131072
+        },
+        "Qwen3.5-122B-A10B-UD-Q4_K_XL": {
+          "id": "Qwen3.5-122B-A10B-UD-Q4_K_XL",
+          "contextWindow": 65536
+        },
+        "Qwen3.5-122B-A10B-UD-Q4_K_XL-gemini": {
+          "id": "Qwen3.5-122B-A10B-UD-Q4_K_XL-gemini",
+          "contextWindow": 131072
+        },
+        "Qwen3.5-9B-Q6_K": {
+          "id": "Qwen3.5-9B-Q6_K",
+          "contextWindow": 32768
+        },
+        "Qwen3.6-35B-A3B-GGUF-256k": {
+          "id": "Qwen3.6-35B-A3B-GGUF-256k",
+          "contextWindow": 262144
+        },
+        "Qwen3.6-35B-A3B-ti-128k": {
+          "id": "Qwen3.6-35B-A3B-ti-128k",
+          "contextWindow": 131072
+        },
+        "Qwen3.8-27B-GGUF-256k": {
+          "id": "Qwen3.8-27B-GGUF-256k",
+          "contextWindow": 262144
+        }
+      }
+    }
+  }
+}
+{%- elif hostname == "CS-M064" -%}
+{
+  "provider": {
+    "a-lnx005": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "llama.cpp - a-lnx005",
+      "options": {
+        "baseURL": "http://a-lnx005.divms.uiowa.edu:8000/v1",
+        "apiKey": "saftipCobatNoofHeughPapnop"
+      },
+      "models": {
+        "bge-reranker-v2-m3": {
+          "id": "bge-reranker-v2-m3"
+        },
+        "gemma-4-E4B-it:Q4_K_M": {
+          "id": "gemma-4-E4B-it:Q4_K_M",
+          "contextWindow": 32768
+        },
+        "Ministral-8B-Instruct-2410-Q4": {
+          "id": "Ministral-8B-Instruct-2410-Q4"
+        },
+        "nomic-embed-text-v2-moe": {
+          "id": "nomic-embed-text-v2-moe"
+        },
+        "Osmosis-Apply-1.7B": {
+          "id": "Osmosis-Apply-1.7B"
+        },
+        "Q3.5-9B-UA": {
+          "id": "Q3.5-9B-UA",
+          "contextWindow": 131072
+        },
+        "qwen2.5-coder-7b-fim": {
+          "id": "qwen2.5-coder-7b-fim",
+          "contextWindow": 4096
+        },
+        "Qwen2.5.1-C7BI-IQ4_XS": {
+          "id": "Qwen2.5.1-C7BI-IQ4_XS",
+          "contextWindow": 8192
+        },
+        "Qwen3.5-9B-Q4_K_M": {
+          "id": "Qwen3.5-9B-Q4_K_M",
+          "contextWindow": 131072
+        },
+        "Qwen3.6-35B-A3B-128k": {
+          "id": "Qwen3.6-35B-A3B-128k",
+          "contextWindow": 131072
+        }
+      }
+    },
+    "benway": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "llama.cpp - benway",
+      "options": {
+        "baseURL": "http://benway.crashland:8000/v1",
+        "apiKey": "loafNigVeedWifAfFaTwionJon"
+      },
+      "models": {
+        "bge-reranker-v2-m3": {
+          "id": "bge-reranker-v2-m3"
+        },
+        "gemma-4-26B-A4B-it-GGUF-xt-128k": {
+          "id": "gemma-4-26B-A4B-it-GGUF-xt-128k",
+          "contextWindow": 131072
+        },
+        "gemma-4-E4B-it:Q6_K": {
+          "id": "gemma-4-E4B-it:Q6_K",
+          "contextWindow": 65536
+        },
+        "gpt-oss-20b-Q4_K_M-32k": {
+          "id": "gpt-oss-20b-Q4_K_M-32k",
+          "contextWindow": 32768
+        },
+        "Ministral-8B-Instruct-2410-Q6": {
+          "id": "Ministral-8B-Instruct-2410-Q6"
+        },
+        "nomic-embed-text-v2-moe": {
+          "id": "nomic-embed-text-v2-moe"
+        },
+        "Osmosis-Apply-1.7B": {
+          "id": "Osmosis-Apply-1.7B"
+        },
+        "Q3.5-9B-UA": {
+          "id": "Q3.5-9B-UA",
+          "contextWindow": 131072
+        },
+        "qwen2.5-coder-7b-fim": {
+          "id": "qwen2.5-coder-7b-fim",
+          "contextWindow": 4096
+        },
+        "Qwen2.5.1-C7BI-Q8_0": {
+          "id": "Qwen2.5.1-C7BI-Q8_0",
+          "contextWindow": 32768
+        },
+        "Qwen3.5-9B-Q8_0-64k": {
+          "id": "Qwen3.5-9B-Q8_0-64k",
+          "contextWindow": 65536
+        },
+        "Qwen3.6-35B-A3B-xt-32k": {
+          "id": "Qwen3.6-35B-A3B-xt-32k",
+          "contextWindow": 32768
+        }
+      }
+    },
+    "barracuda": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "llama.cpp - barracuda",
+      "options": {
+        "baseURL": "http://barracuda.divms.uiowa.edu:8000/v1",
+        "apiKey": "jaidByequiopMuasigjugNanBi"
+      },
+      "models": {
+        "bge-reranker-v2-m3": {
+          "id": "bge-reranker-v2-m3"
+        },
+        "gemma-4-26B-A4B-it-GGUF": {
+          "id": "gemma-4-26B-A4B-it-GGUF",
+          "contextWindow": 65536
+        },
+        "gemma-4-26B-A4B-it-GGUF-ti-128k": {
+          "id": "gemma-4-26B-A4B-it-GGUF-ti-128k",
+          "contextWindow": 131072
+        },
+        "gemma-4-E4B-it:Q6_K": {
+          "id": "gemma-4-E4B-it:Q6_K",
+          "contextWindow": 65536
+        },
+        "GLM-4.5-Air": {
+          "id": "GLM-4.5-Air"
+        },
+        "gpt-oss-120b": {
+          "id": "gpt-oss-120b",
+          "contextWindow": 65536
+        },
+        "Ministral-8B-Instruct-2410-Q6": {
+          "id": "Ministral-8B-Instruct-2410-Q6"
+        },
+        "nomic-embed-text-v2-moe": {
+          "id": "nomic-embed-text-v2-moe"
+        },
+        "Osmosis-Apply-1.7B": {
+          "id": "Osmosis-Apply-1.7B"
+        },
+        "Q3.5-9B-UA": {
+          "id": "Q3.5-9B-UA",
+          "contextWindow": 131072
+        },
+        "qwen2.5-coder-7b-fim": {
+          "id": "qwen2.5-coder-7b-fim",
+          "contextWindow": 4096
+        },
+        "Qwen2.5.1-C7BI-Q6_K-ti": {
+          "id": "Qwen2.5.1-C7BI-Q6_K-ti",
+          "contextWindow": 16384
+        },
+        "Qwen3.5-122B-A10B-UD-IQ4_NL": {
+          "id": "Qwen3.5-122B-A10B-UD-IQ4_NL",
+          "contextWindow": 131072
+        },
+        "Qwen3.5-122B-A10B-UD-Q4_K_XL": {
+          "id": "Qwen3.5-122B-A10B-UD-Q4_K_XL",
+          "contextWindow": 65536
+        },
+        "Qwen3.5-122B-A10B-UD-Q4_K_XL-gemini": {
+          "id": "Qwen3.5-122B-A10B-UD-Q4_K_XL-gemini",
+          "contextWindow": 131072
+        },
+        "Qwen3.5-9B-Q6_K": {
+          "id": "Qwen3.5-9B-Q6_K",
+          "contextWindow": 32768
+        },
+        "Qwen3.6-35B-A3B-GGUF-256k": {
+          "id": "Qwen3.6-35B-A3B-GGUF-256k",
+          "contextWindow": 262144
+        },
+        "Qwen3.6-35B-A3B-ti-128k": {
+          "id": "Qwen3.6-35B-A3B-ti-128k",
+          "contextWindow": 131072
+        },
+        "Qwen3.8-27B-GGUF-256k": {
+          "id": "Qwen3.8-27B-GGUF-256k",
+          "contextWindow": 262144
+        }
+      }
+    },
+    "alien": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "llama.cpp - alien",
+      "options": {
+        "baseURL": "http://alien.divms.uiowa.edu:8000/v1",
+        "apiKey": "fignijovtikUkIgPobveptyeycsyomceasCi"
+      },
+      "models": {
+        "bge-reranker-v2-m3": {
+          "id": "bge-reranker-v2-m3"
+        },
+        "gemma-4-26B-A4B-it-GGUF-ti-128k": {
+          "id": "gemma-4-26B-A4B-it-GGUF-ti-128k",
+          "contextWindow": 131072
+        },
+        "gemma-4-E4B-it:Q6_K": {
+          "id": "gemma-4-E4B-it:Q6_K",
+          "contextWindow": 65536
+        },
+        "Ministral-8B-Instruct-2410-Q6": {
+          "id": "Ministral-8B-Instruct-2410-Q6"
+        },
+        "nomic-embed-text-v2-moe": {
+          "id": "nomic-embed-text-v2-moe"
+        },
+        "Osmosis-Apply-1.7B": {
+          "id": "Osmosis-Apply-1.7B"
+        },
+        "Q3.5-9B-UA": {
+          "id": "Q3.5-9B-UA",
+          "contextWindow": 131072
+        },
+        "qwen2.5-coder-7b-fim": {
+          "id": "qwen2.5-coder-7b-fim",
+          "contextWindow": 4096
+        },
+        "Qwen2.5.1-C7BI-Q6_K-ti": {
+          "id": "Qwen2.5.1-C7BI-Q6_K-ti",
+          "contextWindow": 16384
+        },
+        "Qwen3.5-9B-Q6_K": {
+          "id": "Qwen3.5-9B-Q6_K",
+          "contextWindow": 32768
+        },
+        "Qwen3.6-35B-A3B-ti-128k": {
+          "id": "Qwen3.6-35B-A3B-ti-128k",
+          "contextWindow": 131072
+        }
+      }
+    },
+    "CS-M064": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "llama.cpp - CS-M064",
+      "options": {
+        "baseURL": "http://localhost:8001/v1",
+        "apiKey": "IretUrwyDreabsIvdeudFuFlof"
+      },
+      "models": {
+        "bge-reranker-v2-m3": {
+          "id": "bge-reranker-v2-m3"
+        },
+        "gemma-4-E4B-it:Q4_K_M": {
+          "id": "gemma-4-E4B-it:Q4_K_M",
+          "contextWindow": 32768
+        },
+        "Ministral-8B-Instruct-2410-Q4": {
+          "id": "Ministral-8B-Instruct-2410-Q4"
+        },
+        "nomic-embed-text-v2-moe": {
+          "id": "nomic-embed-text-v2-moe"
+        },
+        "Osmosis-Apply-1.7B": {
+          "id": "Osmosis-Apply-1.7B"
+        },
+        "Q3.5-9B-UA": {
+          "id": "Q3.5-9B-UA",
+          "contextWindow": 131072
+        },
+        "qwen2.5-coder-7b-fim": {
+          "id": "qwen2.5-coder-7b-fim",
+          "contextWindow": 4096
+        },
+        "Qwen2.5.1-C7BI-IQ4_XS": {
+          "id": "Qwen2.5.1-C7BI-IQ4_XS",
+          "contextWindow": 8192
+        },
+        "Qwen2.5.1-C7BI-Q6_K": {
+          "id": "Qwen2.5.1-C7BI-Q6_K",
+          "contextWindow": 16384
+        },
+        "Qwen3.5-9B-Q4_K_M": {
+          "id": "Qwen3.5-9B-Q4_K_M",
+          "contextWindow": 131072
+        },
+        "Qwen3.6-35B-A3B-128k": {
+          "id": "Qwen3.6-35B-A3B-128k",
+          "contextWindow": 131072
+        }
+      }
+    }
+  }
+}
+{%- elif hostname == "LAA-M092" -%}
+{
+  "provider": {
+    "a-lnx005": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "llama.cpp - a-lnx005",
+      "options": {
+        "baseURL": "http://a-lnx005.divms.uiowa.edu:8000/v1",
+        "apiKey": "saftipCobatNoofHeughPapnop"
+      },
+      "models": {
+        "bge-reranker-v2-m3": {
+          "id": "bge-reranker-v2-m3"
+        },
+        "gemma-4-E4B-it:Q4_K_M": {
+          "id": "gemma-4-E4B-it:Q4_K_M",
+          "contextWindow": 32768
+        },
+        "Ministral-8B-Instruct-2410-Q4": {
+          "id": "Ministral-8B-Instruct-2410-Q4"
+        },
+        "nomic-embed-text-v2-moe": {
+          "id": "nomic-embed-text-v2-moe"
+        },
+        "Osmosis-Apply-1.7B": {
+          "id": "Osmosis-Apply-1.7B"
+        },
+        "Q3.5-9B-UA": {
+          "id": "Q3.5-9B-UA",
+          "contextWindow": 131072
+        },
+        "qwen2.5-coder-7b-fim": {
+          "id": "qwen2.5-coder-7b-fim",
+          "contextWindow": 4096
+        },
+        "Qwen2.5.1-C7BI-IQ4_XS": {
+          "id": "Qwen2.5.1-C7BI-IQ4_XS",
+          "contextWindow": 8192
+        },
+        "Qwen3.5-9B-Q4_K_M": {
+          "id": "Qwen3.5-9B-Q4_K_M",
+          "contextWindow": 131072
+        },
+        "Qwen3.6-35B-A3B-128k": {
+          "id": "Qwen3.6-35B-A3B-128k",
+          "contextWindow": 131072
+        }
+      }
+    },
+    "benway": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "llama.cpp - benway",
+      "options": {
+        "baseURL": "http://benway.crashland:8000/v1",
+        "apiKey": "loafNigVeedWifAfFaTwionJon"
+      },
+      "models": {
+        "bge-reranker-v2-m3": {
+          "id": "bge-reranker-v2-m3"
+        },
+        "gemma-4-26B-A4B-it-GGUF-xt-128k": {
+          "id": "gemma-4-26B-A4B-it-GGUF-xt-128k",
+          "contextWindow": 131072
+        },
+        "gemma-4-E4B-it:Q6_K": {
+          "id": "gemma-4-E4B-it:Q6_K",
+          "contextWindow": 65536
+        },
+        "gpt-oss-20b-Q4_K_M-32k": {
+          "id": "gpt-oss-20b-Q4_K_M-32k",
+          "contextWindow": 32768
+        },
+        "Ministral-8B-Instruct-2410-Q6": {
+          "id": "Ministral-8B-Instruct-2410-Q6"
+        },
+        "nomic-embed-text-v2-moe": {
+          "id": "nomic-embed-text-v2-moe"
+        },
+        "Osmosis-Apply-1.7B": {
+          "id": "Osmosis-Apply-1.7B"
+        },
+        "Q3.5-9B-UA": {
+          "id": "Q3.5-9B-UA",
+          "contextWindow": 131072
+        },
+        "qwen2.5-coder-7b-fim": {
+          "id": "qwen2.5-coder-7b-fim",
+          "contextWindow": 4096
+        },
+        "Qwen2.5.1-C7BI-Q8_0": {
+          "id": "Qwen2.5.1-C7BI-Q8_0",
+          "contextWindow": 32768
+        },
+        "Qwen3.5-9B-Q8_0-64k": {
+          "id": "Qwen3.5-9B-Q8_0-64k",
+          "contextWindow": 65536
+        },
+        "Qwen3.6-35B-A3B-xt-32k": {
+          "id": "Qwen3.6-35B-A3B-xt-32k",
+          "contextWindow": 32768
+        }
+      }
+    },
+    "barracuda": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "llama.cpp - barracuda",
+      "options": {
+        "baseURL": "http://barracuda.divms.uiowa.edu:8000/v1",
+        "apiKey": "jaidByequiopMuasigjugNanBi"
+      },
+      "models": {
+        "bge-reranker-v2-m3": {
+          "id": "bge-reranker-v2-m3"
+        },
+        "gemma-4-26B-A4B-it-GGUF": {
+          "id": "gemma-4-26B-A4B-it-GGUF",
+          "contextWindow": 65536
+        },
+        "gemma-4-26B-A4B-it-GGUF-ti-128k": {
+          "id": "gemma-4-26B-A4B-it-GGUF-ti-128k",
+          "contextWindow": 131072
+        },
+        "gemma-4-E4B-it:Q6_K": {
+          "id": "gemma-4-E4B-it:Q6_K",
+          "contextWindow": 65536
+        },
+        "GLM-4.5-Air": {
+          "id": "GLM-4.5-Air"
+        },
+        "gpt-oss-120b": {
+          "id": "gpt-oss-120b",
+          "contextWindow": 65536
+        },
+        "Ministral-8B-Instruct-2410-Q6": {
+          "id": "Ministral-8B-Instruct-2410-Q6"
+        },
+        "nomic-embed-text-v2-moe": {
+          "id": "nomic-embed-text-v2-moe"
+        },
+        "Osmosis-Apply-1.7B": {
+          "id": "Osmosis-Apply-1.7B"
+        },
+        "Q3.5-9B-UA": {
+          "id": "Q3.5-9B-UA",
+          "contextWindow": 131072
+        },
+        "qwen2.5-coder-7b-fim": {
+          "id": "qwen2.5-coder-7b-fim",
+          "contextWindow": 4096
+        },
+        "Qwen2.5.1-C7BI-Q6_K-ti": {
+          "id": "Qwen2.5.1-C7BI-Q6_K-ti",
+          "contextWindow": 16384
+        },
+        "Qwen3.5-122B-A10B-UD-IQ4_NL": {
+          "id": "Qwen3.5-122B-A10B-UD-IQ4_NL",
+          "contextWindow": 131072
+        },
+        "Qwen3.5-122B-A10B-UD-Q4_K_XL": {
+          "id": "Qwen3.5-122B-A10B-UD-Q4_K_XL",
+          "contextWindow": 65536
+        },
+        "Qwen3.5-122B-A10B-UD-Q4_K_XL-gemini": {
+          "id": "Qwen3.5-122B-A10B-UD-Q4_K_XL-gemini",
+          "contextWindow": 131072
+        },
+        "Qwen3.5-9B-Q6_K": {
+          "id": "Qwen3.5-9B-Q6_K",
+          "contextWindow": 32768
+        },
+        "Qwen3.6-35B-A3B-GGUF-256k": {
+          "id": "Qwen3.6-35B-A3B-GGUF-256k",
+          "contextWindow": 262144
+        },
+        "Qwen3.6-35B-A3B-ti-128k": {
+          "id": "Qwen3.6-35B-A3B-ti-128k",
+          "contextWindow": 131072
+        },
+        "Qwen3.8-27B-GGUF-256k": {
+          "id": "Qwen3.8-27B-GGUF-256k",
+          "contextWindow": 262144
+        }
+      }
+    },
+    "alien": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "llama.cpp - alien",
+      "options": {
+        "baseURL": "http://alien.divms.uiowa.edu:8000/v1",
+        "apiKey": "fignijovtikUkIgPobveptyeycsyomceasCi"
+      },
+      "models": {
+        "bge-reranker-v2-m3": {
+          "id": "bge-reranker-v2-m3"
+        },
+        "gemma-4-26B-A4B-it-GGUF-ti-128k": {
+          "id": "gemma-4-26B-A4B-it-GGUF-ti-128k",
+          "contextWindow": 131072
+        },
+        "gemma-4-E4B-it:Q6_K": {
+          "id": "gemma-4-E4B-it:Q6_K",
+          "contextWindow": 65536
+        },
+        "Ministral-8B-Instruct-2410-Q6": {
+          "id": "Ministral-8B-Instruct-2410-Q6"
+        },
+        "nomic-embed-text-v2-moe": {
+          "id": "nomic-embed-text-v2-moe"
+        },
+        "Osmosis-Apply-1.7B": {
+          "id": "Osmosis-Apply-1.7B"
+        },
+        "Q3.5-9B-UA": {
+          "id": "Q3.5-9B-UA",
+          "contextWindow": 131072
+        },
+        "qwen2.5-coder-7b-fim": {
+          "id": "qwen2.5-coder-7b-fim",
+          "contextWindow": 4096
+        },
+        "Qwen2.5.1-C7BI-Q6_K-ti": {
+          "id": "Qwen2.5.1-C7BI-Q6_K-ti",
+          "contextWindow": 16384
+        },
+        "Qwen3.5-9B-Q6_K": {
+          "id": "Qwen3.5-9B-Q6_K",
+          "contextWindow": 32768
+        },
+        "Qwen3.6-35B-A3B-ti-128k": {
+          "id": "Qwen3.6-35B-A3B-ti-128k",
+          "contextWindow": 131072
+        }
+      }
+    },
+    "LAA-M092": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "llama.cpp - LAA-M092",
+      "options": {
+        "baseURL": "http://localhost:8000/v1",
+        "apiKey": "IretUrwyDreabsIvdeudFuFlof"
+      },
+      "models": {
+        "bge-reranker-v2-m3": {
+          "id": "bge-reranker-v2-m3"
+        },
+        "gemma-4-E4B-it:Q4_K_M": {
+          "id": "gemma-4-E4B-it:Q4_K_M",
+          "contextWindow": 32768
+        },
+        "Ministral-8B-Instruct-2410-Q4": {
+          "id": "Ministral-8B-Instruct-2410-Q4"
+        },
+        "nomic-embed-text-v2-moe": {
+          "id": "nomic-embed-text-v2-moe"
+        },
+        "Osmosis-Apply-1.7B": {
+          "id": "Osmosis-Apply-1.7B"
+        },
+        "Q3.5-9B-UA": {
+          "id": "Q3.5-9B-UA",
+          "contextWindow": 131072
+        },
+        "qwen2.5-coder-7b-fim": {
+          "id": "qwen2.5-coder-7b-fim",
+          "contextWindow": 4096
+        },
+        "Qwen2.5.1-C7BI-IQ4_XS": {
+          "id": "Qwen2.5.1-C7BI-IQ4_XS",
+          "contextWindow": 8192
+        },
+        "Qwen2.5.1-C7BI-Q6_K": {
+          "id": "Qwen2.5.1-C7BI-Q6_K",
+          "contextWindow": 16384
+        },
+        "Qwen3.5-9B-Q4_K_M": {
+          "id": "Qwen3.5-9B-Q4_K_M",
+          "contextWindow": 131072
+        },
+        "Qwen3.6-35B-A3B-128k": {
+          "id": "Qwen3.6-35B-A3B-128k",
+          "contextWindow": 131072
+        }
+      }
+    }
+  }
+}
+{%- elif hostname == "beast" -%}
+{
+  "provider": {
+    "a-lnx005": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "llama.cpp - a-lnx005",
+      "options": {
+        "baseURL": "http://a-lnx005.divms.uiowa.edu:8000/v1",
+        "apiKey": "saftipCobatNoofHeughPapnop"
+      },
+      "models": {
+        "bge-reranker-v2-m3": {
+          "id": "bge-reranker-v2-m3"
+        },
+        "gemma-4-E4B-it:Q4_K_M": {
+          "id": "gemma-4-E4B-it:Q4_K_M",
+          "contextWindow": 32768
+        },
+        "Ministral-8B-Instruct-2410-Q4": {
+          "id": "Ministral-8B-Instruct-2410-Q4"
+        },
+        "nomic-embed-text-v2-moe": {
+          "id": "nomic-embed-text-v2-moe"
+        },
+        "Osmosis-Apply-1.7B": {
+          "id": "Osmosis-Apply-1.7B"
+        },
+        "Q3.5-9B-UA": {
+          "id": "Q3.5-9B-UA",
+          "contextWindow": 131072
+        },
+        "qwen2.5-coder-7b-fim": {
+          "id": "qwen2.5-coder-7b-fim",
+          "contextWindow": 4096
+        },
+        "Qwen2.5.1-C7BI-IQ4_XS": {
+          "id": "Qwen2.5.1-C7BI-IQ4_XS",
+          "contextWindow": 8192
+        },
+        "Qwen3.5-9B-Q4_K_M": {
+          "id": "Qwen3.5-9B-Q4_K_M",
+          "contextWindow": 131072
+        },
+        "Qwen3.6-35B-A3B-128k": {
+          "id": "Qwen3.6-35B-A3B-128k",
+          "contextWindow": 131072
+        }
+      }
+    },
+    "benway": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "llama.cpp - benway",
+      "options": {
+        "baseURL": "http://benway.crashland:8000/v1",
+        "apiKey": "loafNigVeedWifAfFaTwionJon"
+      },
+      "models": {
+        "bge-reranker-v2-m3": {
+          "id": "bge-reranker-v2-m3"
+        },
+        "gemma-4-26B-A4B-it-GGUF-xt-128k": {
+          "id": "gemma-4-26B-A4B-it-GGUF-xt-128k",
+          "contextWindow": 131072
+        },
+        "gemma-4-E4B-it:Q6_K": {
+          "id": "gemma-4-E4B-it:Q6_K",
+          "contextWindow": 65536
+        },
+        "gpt-oss-20b-Q4_K_M-32k": {
+          "id": "gpt-oss-20b-Q4_K_M-32k",
+          "contextWindow": 32768
+        },
+        "Ministral-8B-Instruct-2410-Q6": {
+          "id": "Ministral-8B-Instruct-2410-Q6"
+        },
+        "nomic-embed-text-v2-moe": {
+          "id": "nomic-embed-text-v2-moe"
+        },
+        "Osmosis-Apply-1.7B": {
+          "id": "Osmosis-Apply-1.7B"
+        },
+        "Q3.5-9B-UA": {
+          "id": "Q3.5-9B-UA",
+          "contextWindow": 131072
+        },
+        "qwen2.5-coder-7b-fim": {
+          "id": "qwen2.5-coder-7b-fim",
+          "contextWindow": 4096
+        },
+        "Qwen2.5.1-C7BI-Q8_0": {
+          "id": "Qwen2.5.1-C7BI-Q8_0",
+          "contextWindow": 32768
+        },
+        "Qwen3.5-9B-Q8_0-64k": {
+          "id": "Qwen3.5-9B-Q8_0-64k",
+          "contextWindow": 65536
+        },
+        "Qwen3.6-35B-A3B-xt-32k": {
+          "id": "Qwen3.6-35B-A3B-xt-32k",
+          "contextWindow": 32768
+        }
+      }
+    },
+    "barracuda": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "llama.cpp - barracuda",
+      "options": {
+        "baseURL": "http://barracuda.divms.uiowa.edu:8000/v1",
+        "apiKey": "jaidByequiopMuasigjugNanBi"
+      },
+      "models": {
+        "bge-reranker-v2-m3": {
+          "id": "bge-reranker-v2-m3"
+        },
+        "gemma-4-26B-A4B-it-GGUF": {
+          "id": "gemma-4-26B-A4B-it-GGUF",
+          "contextWindow": 65536
+        },
+        "gemma-4-26B-A4B-it-GGUF-ti-128k": {
+          "id": "gemma-4-26B-A4B-it-GGUF-ti-128k",
+          "contextWindow": 131072
+        },
+        "gemma-4-E4B-it:Q6_K": {
+          "id": "gemma-4-E4B-it:Q6_K",
+          "contextWindow": 65536
+        },
+        "GLM-4.5-Air": {
+          "id": "GLM-4.5-Air"
+        },
+        "gpt-oss-120b": {
+          "id": "gpt-oss-120b",
+          "contextWindow": 65536
+        },
+        "Ministral-8B-Instruct-2410-Q6": {
+          "id": "Ministral-8B-Instruct-2410-Q6"
+        },
+        "nomic-embed-text-v2-moe": {
+          "id": "nomic-embed-text-v2-moe"
+        },
+        "Osmosis-Apply-1.7B": {
+          "id": "Osmosis-Apply-1.7B"
+        },
+        "Q3.5-9B-UA": {
+          "id": "Q3.5-9B-UA",
+          "contextWindow": 131072
+        },
+        "qwen2.5-coder-7b-fim": {
+          "id": "qwen2.5-coder-7b-fim",
+          "contextWindow": 4096
+        },
+        "Qwen2.5.1-C7BI-Q6_K-ti": {
+          "id": "Qwen2.5.1-C7BI-Q6_K-ti",
+          "contextWindow": 16384
+        },
+        "Qwen3.5-122B-A10B-UD-IQ4_NL": {
+          "id": "Qwen3.5-122B-A10B-UD-IQ4_NL",
+          "contextWindow": 131072
+        },
+        "Qwen3.5-122B-A10B-UD-Q4_K_XL": {
+          "id": "Qwen3.5-122B-A10B-UD-Q4_K_XL",
+          "contextWindow": 65536
+        },
+        "Qwen3.5-122B-A10B-UD-Q4_K_XL-gemini": {
+          "id": "Qwen3.5-122B-A10B-UD-Q4_K_XL-gemini",
+          "contextWindow": 131072
+        },
+        "Qwen3.5-9B-Q6_K": {
+          "id": "Qwen3.5-9B-Q6_K",
+          "contextWindow": 32768
+        },
+        "Qwen3.6-35B-A3B-GGUF-256k": {
+          "id": "Qwen3.6-35B-A3B-GGUF-256k",
+          "contextWindow": 262144
+        },
+        "Qwen3.6-35B-A3B-ti-128k": {
+          "id": "Qwen3.6-35B-A3B-ti-128k",
+          "contextWindow": 131072
+        },
+        "Qwen3.8-27B-GGUF-256k": {
+          "id": "Qwen3.8-27B-GGUF-256k",
+          "contextWindow": 262144
+        }
+      }
+    }
+  }
+}
+{%- elif hostname == "lazarus" -%}
+{
+  "provider": {
+    "a-lnx005": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "llama.cpp - a-lnx005",
+      "options": {
+        "baseURL": "http://a-lnx005.divms.uiowa.edu:8000/v1",
+        "apiKey": "saftipCobatNoofHeughPapnop"
+      },
+      "models": {
+        "bge-reranker-v2-m3": {
+          "id": "bge-reranker-v2-m3"
+        },
+        "gemma-4-E4B-it:Q4_K_M": {
+          "id": "gemma-4-E4B-it:Q4_K_M",
+          "contextWindow": 32768
+        },
+        "Ministral-8B-Instruct-2410-Q4": {
+          "id": "Ministral-8B-Instruct-2410-Q4"
+        },
+        "nomic-embed-text-v2-moe": {
+          "id": "nomic-embed-text-v2-moe"
+        },
+        "Osmosis-Apply-1.7B": {
+          "id": "Osmosis-Apply-1.7B"
+        },
+        "Q3.5-9B-UA": {
+          "id": "Q3.5-9B-UA",
+          "contextWindow": 131072
+        },
+        "qwen2.5-coder-7b-fim": {
+          "id": "qwen2.5-coder-7b-fim",
+          "contextWindow": 4096
+        },
+        "Qwen2.5.1-C7BI-IQ4_XS": {
+          "id": "Qwen2.5.1-C7BI-IQ4_XS",
+          "contextWindow": 8192
+        },
+        "Qwen3.5-9B-Q4_K_M": {
+          "id": "Qwen3.5-9B-Q4_K_M",
+          "contextWindow": 131072
+        },
+        "Qwen3.6-35B-A3B-128k": {
+          "id": "Qwen3.6-35B-A3B-128k",
+          "contextWindow": 131072
+        }
+      }
+    },
+    "benway": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "llama.cpp - benway",
+      "options": {
+        "baseURL": "http://benway.crashland:8000/v1",
+        "apiKey": "loafNigVeedWifAfFaTwionJon"
+      },
+      "models": {
+        "bge-reranker-v2-m3": {
+          "id": "bge-reranker-v2-m3"
+        },
+        "gemma-4-26B-A4B-it-GGUF-xt-128k": {
+          "id": "gemma-4-26B-A4B-it-GGUF-xt-128k",
+          "contextWindow": 131072
+        },
+        "gemma-4-E4B-it:Q6_K": {
+          "id": "gemma-4-E4B-it:Q6_K",
+          "contextWindow": 65536
+        },
+        "gpt-oss-20b-Q4_K_M-32k": {
+          "id": "gpt-oss-20b-Q4_K_M-32k",
+          "contextWindow": 32768
+        },
+        "Ministral-8B-Instruct-2410-Q6": {
+          "id": "Ministral-8B-Instruct-2410-Q6"
+        },
+        "nomic-embed-text-v2-moe": {
+          "id": "nomic-embed-text-v2-moe"
+        },
+        "Osmosis-Apply-1.7B": {
+          "id": "Osmosis-Apply-1.7B"
+        },
+        "Q3.5-9B-UA": {
+          "id": "Q3.5-9B-UA",
+          "contextWindow": 131072
+        },
+        "qwen2.5-coder-7b-fim": {
+          "id": "qwen2.5-coder-7b-fim",
+          "contextWindow": 4096
+        },
+        "Qwen2.5.1-C7BI-Q8_0": {
+          "id": "Qwen2.5.1-C7BI-Q8_0",
+          "contextWindow": 32768
+        },
+        "Qwen3.5-9B-Q8_0-64k": {
+          "id": "Qwen3.5-9B-Q8_0-64k",
+          "contextWindow": 65536
+        },
+        "Qwen3.6-35B-A3B-xt-32k": {
+          "id": "Qwen3.6-35B-A3B-xt-32k",
+          "contextWindow": 32768
+        }
+      }
+    },
+    "barracuda": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "llama.cpp - barracuda",
+      "options": {
+        "baseURL": "http://barracuda.divms.uiowa.edu:8000/v1",
+        "apiKey": "jaidByequiopMuasigjugNanBi"
+      },
+      "models": {
+        "bge-reranker-v2-m3": {
+          "id": "bge-reranker-v2-m3"
+        },
+        "gemma-4-26B-A4B-it-GGUF": {
+          "id": "gemma-4-26B-A4B-it-GGUF",
+          "contextWindow": 65536
+        },
+        "gemma-4-26B-A4B-it-GGUF-ti-128k": {
+          "id": "gemma-4-26B-A4B-it-GGUF-ti-128k",
+          "contextWindow": 131072
+        },
+        "gemma-4-E4B-it:Q6_K": {
+          "id": "gemma-4-E4B-it:Q6_K",
+          "contextWindow": 65536
+        },
+        "GLM-4.5-Air": {
+          "id": "GLM-4.5-Air"
+        },
+        "gpt-oss-120b": {
+          "id": "gpt-oss-120b",
+          "contextWindow": 65536
+        },
+        "Ministral-8B-Instruct-2410-Q6": {
+          "id": "Ministral-8B-Instruct-2410-Q6"
+        },
+        "nomic-embed-text-v2-moe": {
+          "id": "nomic-embed-text-v2-moe"
+        },
+        "Osmosis-Apply-1.7B": {
+          "id": "Osmosis-Apply-1.7B"
+        },
+        "Q3.5-9B-UA": {
+          "id": "Q3.5-9B-UA",
+          "contextWindow": 131072
+        },
+        "qwen2.5-coder-7b-fim": {
+          "id": "qwen2.5-coder-7b-fim",
+          "contextWindow": 4096
+        },
+        "Qwen2.5.1-C7BI-Q6_K-ti": {
+          "id": "Qwen2.5.1-C7BI-Q6_K-ti",
+          "contextWindow": 16384
+        },
+        "Qwen3.5-122B-A10B-UD-IQ4_NL": {
+          "id": "Qwen3.5-122B-A10B-UD-IQ4_NL",
+          "contextWindow": 131072
+        },
+        "Qwen3.5-122B-A10B-UD-Q4_K_XL": {
+          "id": "Qwen3.5-122B-A10B-UD-Q4_K_XL",
+          "contextWindow": 65536
+        },
+        "Qwen3.5-122B-A10B-UD-Q4_K_XL-gemini": {
+          "id": "Qwen3.5-122B-A10B-UD-Q4_K_XL-gemini",
+          "contextWindow": 131072
+        },
+        "Qwen3.5-9B-Q6_K": {
+          "id": "Qwen3.5-9B-Q6_K",
+          "contextWindow": 32768
+        },
+        "Qwen3.6-35B-A3B-GGUF-256k": {
+          "id": "Qwen3.6-35B-A3B-GGUF-256k",
+          "contextWindow": 262144
+        },
+        "Qwen3.6-35B-A3B-ti-128k": {
+          "id": "Qwen3.6-35B-A3B-ti-128k",
+          "contextWindow": 131072
+        },
+        "Qwen3.8-27B-GGUF-256k": {
+          "id": "Qwen3.8-27B-GGUF-256k",
+          "contextWindow": 262144
+        }
+      }
+    }
+  }
+}
+{%- else -%}
+{}
+{%- endif -%}
