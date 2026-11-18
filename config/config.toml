@@ -28,7 +28,6 @@ rust = "latest"
 python = "3"
 node = "latest"
 "npm:mcp-remote" = "latest"
-"pipx:beets" = "latest"
 
 [[tools.ruby]]
   version = "3"
