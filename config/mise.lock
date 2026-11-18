@@ -309,6 +309,9 @@ aube = { path = "locks/npm-mcp-remote/0.16.6", digest = "sha256:a720a0e6b1bf9ff7
 backend = "npm:mcp-remote"
 specifiers = ["latest"]
 
+[tools."npm:mcp-remote".provenance]
+repository = "github.com/punkpeye/mcp-remote"
+
 [[tools.oh-my-posh]]
 version = "32.0.0"
 backend = "aqua:JanDeDobbeleer/oh-my-posh"
@@ -536,6 +539,53 @@ checksum = "sha256:71b2fef860abe467217a538ff31de02f5258807c0129f771846f87bd029aa
 checksum_source = "mise-versions"
 url = "https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-x86_64-pc-windows-msvc.zip"
 url_api = "https://api.github.com/repos/BurntSushi/ripgrep/releases/assets/478119643"
+
+[[tools.ruby]]
+version = "3.2.5"
+backend = "core:ruby"
+specifiers = ["3.2.5"]
+
+[tools.ruby.options]
+compile = "false"
+precompiled_url = "jdx/ruby"
+ruby_build_repo = "https://github.com/rbenv/ruby-build.git"
+ruby_install = "false"
+
+[tools.ruby."platforms.linux-arm64"]
+checksum = "sha256:be6fe22e3d455007b5eb51a4957d3278aaae158d12ec7d3e3592e387509317a1"
+url = "https://github.com/jdx/ruby/releases/download/3.2.5-6/ruby-3.2.5.arm64_linux.tar.gz"
+provenance = "github-attestations"
+
+[tools.ruby."platforms.linux-arm64-musl"]
+checksum = "sha256:ef0610b498f60fb5cfd77b51adb3c10f4ca8ed9a17cb87c61e5bea314ac34a16"
+url = "https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.5.tar.gz"
+
+[tools.ruby."platforms.linux-x64"]
+checksum = "sha256:547ac5c4bd7a5532cf8e57d0e8b53473e284527cf0325ee9154d4d7fde183c23"
+url = "https://github.com/jdx/ruby/releases/download/3.2.5-6/ruby-3.2.5.x86_64_linux.tar.gz"
+provenance = "github-attestations"
+
+[tools.ruby."platforms.linux-x64-musl"]
+checksum = "sha256:ef0610b498f60fb5cfd77b51adb3c10f4ca8ed9a17cb87c61e5bea314ac34a16"
+url = "https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.5.tar.gz"
+
+[tools.ruby."platforms.macos-arm64"]
+checksum = "sha256:29012cf580000bd4576fb7f60ad7f50587817b37da1e36bdf458206f23a84029"
+url = "https://github.com/jdx/ruby/releases/download/3.2.5-6/ruby-3.2.5.macos.tar.gz"
+provenance = "github-attestations"
+
+[tools.ruby."platforms.macos-x64"]
+checksum = "sha256:ef0610b498f60fb5cfd77b51adb3c10f4ca8ed9a17cb87c61e5bea314ac34a16"
+url = "https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.5.tar.gz"
+
+[[tools.ruby]]
+version = "3.2.5"
+backend = "core:ruby"
+specifiers = ["3.2.5"]
+
+[tools.ruby."platforms.windows-x64"]
+checksum = "sha256:3e17f7e60834cfac4b2aae13677c19d3222b52bee328c3c22629246c00cd543c"
+url = "https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.2.5-1/rubyinstaller-3.2.5-1-x64.7z"
 
 [[tools.ruby]]
 version = "3.4.12"
