@@ -1,8 +1,10 @@
 {
-  "rubocop": {
-    "disabled": true
-  },
-  "standardrb": {
-    "disabled": false
+  "formatter": {
+    "rubocop": {
+      "disabled": true
+    },
+    "standardrb": {
+      "disabled": false
+    }
   }
 }
