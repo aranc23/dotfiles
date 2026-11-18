@@ -116,12 +116,6 @@
       "variants": []
     },
     {
-      "path": "home/Library/LaunchAgents/com.user.org-sync.plist",
-      "autosave": true,
-      "encrypt": false,
-      "variants": []
-    },
-    {
       "path": "home/bin/diskuser",
       "autosave": true,
       "encrypt": false,
@@ -254,16 +248,18 @@
     "home/.config/systemd/user": 509,
     "home/.config/systemd/user/dev.mise.mise-history.service.d": 509,
     "home/.config/zellij": 509,
+    "home/.forward": 436,
     "home/.perltidyrc": 384,
     "home/.poshthemes": 509,
+    "home/.procmailrc": 384,
     "home/.ssh": 448,
     "home/.ssh/campus.sh": 448,
     "home/.ssh/crashland.sh": 448,
     "home/.ssh/mac-test-net.sh": 448,
     "home/.tmux.conf": 384,
-    "home/Library": 448,
-    "home/Library/LaunchAgents": 509,
     "home/bin": 448,
-    "home/bin/keychaintmux": 448
+    "home/bin/keychaintmux": 448,
+    "home/bin/org-sync": 488,
+    "home/bin/zfsmgr-send-all": 448
   }
 }
