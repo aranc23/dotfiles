@@ -267,6 +267,7 @@
     "home/Library/LaunchAgents": 509,
     "home/bin": 448,
     "home/bin/keychaintmux": 448,
-    "home/bin/org-sync": 488
+    "home/bin/org-sync": 488,
+    "home/bin/zfsmgr-send-all": 448
   }
 }
