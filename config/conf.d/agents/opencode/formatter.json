@@ -1,0 +1,10 @@
+{
+  "formatter": {
+    "rubocop": {
+      "disabled": true
+    },
+    "standardrb": {
+      "disabled": false
+    }
+  }
+}
