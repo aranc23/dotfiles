@@ -220,6 +220,7 @@
     "config/conf.d/claude": 448,
     "config/conf.d/media": 509,
     "config/conf.d/media/mise.media.toml": 436,
+    "config/conf.d/media/mise.toml": 436,
     "config/conf.d/sops": 448,
     "config/conf.d/sops/mise.toml": 384,
     "config/conf.d/ssh": 448,
