@@ -1,0 +1,16 @@
+#! /bin/bash
+
+export PATH="${PATH}:/usr/local/bin"
+
+[ -z "$HOSTNAME" ] && HOSTNAME=`uname -n`
+[ -f $HOME/.keychain/$HOSTNAME-sh ] && \
+        . $HOME/.keychain/$HOSTNAME-sh
+
+EXCLUDE=""
+for x in send snapshot remote destination; do
+    EXCLUDE="${EXCLUDE} -x zfsmgmt:${x}"
+done
+
+eval "$(${HOME}/.local/bin/mise activate bash)"
+
+zfsmgr send all --lock-file ~/.zfsmgr-send-all.lock --lock --lock-wait 14400 --zfs-binary /usr/sbin/zfs --verbose recv -x mountpoint --unmount $EXCLUDE $*
