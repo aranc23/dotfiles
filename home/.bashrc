@@ -121,7 +121,6 @@ if [[ "$(uname -s)" == "Darwin" ]]; then
     if [[ -x /opt/homebrew/bin/brew ]]; then
        eval "$(/opt/homebrew/bin/brew shellenv)"
     fi
-    export SOPS_AGE_KEY_CMD="security find-generic-password -a $USER -s sops-age -w"
 fi
 
 # we could check these as well, but let's just not
