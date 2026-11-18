@@ -1,2 +1,2 @@
 [tools]
-"pipx:beets" = "latest"
+"pipx:beets" = { version = "latest", extras = ["discogs", "fetchart", "lastgenre"], uvx_args = "--with beets-filetote" }
