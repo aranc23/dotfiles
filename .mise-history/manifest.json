@@ -254,6 +254,7 @@
     "home/.config/systemd/user": 509,
     "home/.config/systemd/user/dev.mise.mise-history.service.d": 509,
     "home/.config/zellij": 509,
+    "home/.forward": 436,
     "home/.perltidyrc": 384,
     "home/.poshthemes": 509,
     "home/.procmailrc": 384,
