@@ -1,0 +1,11 @@
+{
+  "ruby": {
+    "command": [
+      "bundle",
+      "exec",
+      "ruby-lsp"
+    ],
+    "extensions": [
+      "*.rb"
+    ]
+  }
