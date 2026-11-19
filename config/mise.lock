@@ -359,11 +359,6 @@ checksum_source = "mise-versions"
 url = "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v32.0.0/posh-windows-amd64.exe"
 url_api = "https://api.github.com/repos/JanDeDobbeleer/oh-my-posh/releases/assets/724419082"
 
-[[tools."pipx:beets"]]
-version = "2.14.1"
-backend = "pipx:beets"
-specifiers = ["latest"]
-
 [[tools.python]]
 version = "3.15.2"
 backend = "core:python"
