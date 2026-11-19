@@ -8,6 +8,6 @@ backend = "cargo:httm"
 specifiers = ["latest"]
 
 [[tools."gem:zfs_mgmt"]]
-version = "0.4.9"
+version = "0.5.6"
 backend = "gem:zfs_mgmt"
 specifiers = ["latest"]
