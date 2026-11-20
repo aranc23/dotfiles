@@ -219,6 +219,7 @@
     "config/conf.d/agents/opencode": 448,
     "config/conf.d/agents/templates": 509,
     "config/conf.d/claude": 448,
+    "config/conf.d/fnox": 509,
     "config/conf.d/sops": 448,
     "config/conf.d/sops/mise.toml": 384,
     "config/conf.d/ssh": 448,
