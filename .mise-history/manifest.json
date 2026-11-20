@@ -251,6 +251,7 @@
     "home/.bash_profile": 384,
     "home/.config": 448,
     "home/.config/fnox": 448,
+    "home/.config/fnox/config.toml": 384,
     "home/.config/kitty": 448,
     "home/.config/systemd": 509,
     "home/.config/systemd/user": 509,
