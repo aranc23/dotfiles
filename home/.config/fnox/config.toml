@@ -3,7 +3,13 @@ if_missing = "warn"
 
 [providers.age]
 type = "age"
-recipients = ["age1tag1q2wwqy2zkxzahxl0q9ypxzcta8pja62wutqvfrwjptn98k6f5d5sv830r3t"]
+recipients = ["age1tag1qwj8drf66a5we9ynlv0eu6kngeln38k20nun76u33upkjcc7xrzhv8c26qw",
+  "age1v0uwp6zaq6ckc34p7da7ewmjqfw2v2wsye4s665g2dzgs35qcgls6adp4u",
+  "age1tag1qtzl736p8xvckz8rueymfzrcgm0zsxtxs7fswn3y8c294tqgx7022hvzyd7",
+  "age1tag1qwl5lezrqvttv06k2e87vwwcga2lpx3kuhnq9zakqjrsgn2ly3cdvnh8uun",
+  "age1tag1q2wwqy2zkxzahxl0q9ypxzcta8pja62wutqvfrwjptn98k6f5d5sv830r3t",
+  "age1kcg2k2gua490zf34p9kqhpry9ln9xjgsmrafxcjthg063jg8dycs9sdqun"]
+
 key_file = "~/.config/sops/age/keys.txt"
 
 [secrets]
