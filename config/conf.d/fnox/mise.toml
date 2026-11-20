@@ -1,2 +1,4 @@
 [tools]
 fnox = "latest"
+[dotfiles]
+#"~/.config/fnox/config.toml" = { "track" }
