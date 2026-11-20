@@ -32,6 +32,13 @@
       "variants": []
     },
     {
+      "path": "home/.config/fnox/config.toml",
+      "autosave": true,
+      "encrypt": false,
+      "allow_plaintext": true,
+      "variants": []
+    },
+    {
       "path": "home/.config/kitty/kitty.conf",
       "autosave": true,
       "encrypt": false,
