@@ -1,0 +1,4 @@
+[tools]
+fnox = "latest"
+[dotfiles]
+"~/.config/fnox/config.toml" = { mode = "track", encrypt = false, allow_plaintext = true }

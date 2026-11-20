@@ -1,0 +1,11 @@
+default_provider = "age"
+if_missing = "warn"
+
+[providers.age]
+type = "age"
+recipients = ["age1tag1q2wwqy2zkxzahxl0q9ypxzcta8pja62wutqvfrwjptn98k6f5d5sv830r3t"]
+key_file = "~/.config/sops/age/keys.txt"
+
+[secrets]
+DB_URL= { provider = "age", value = "YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IHAyNTZ0YWcgWFBxM3dBIEJHS0xIOFo5ZDc2TWMwbENDbFZjT0VpTmRZaGpaNGtISzAvYTNZS3drNW0vT0VlczM2eVJNMThpV3lDZVNHZERmRDNPZ3VhU2ozNmJ4TERzVzc0cG4rVQprbFFyaW4zanlhZkZaRDZvK2M4RGIyNTA2d1FpdXE4cjJVQkJWdTFnZms4Ci0+IERhW35Vay1ncmVhc2UgRF4qKCBHIFlNIEBnUwo0VHBuZE9DWlhtZFhRZjNCc0ZJaGxzVmZmeUFueWVEbXBOTmYyaUZuOWh5MXJJSFd5SVByRGpLaVkzaE5xQzh4CitDc3BUMjdXN2cwT0dMRTBpOER1K3Zka000cDU0QmQ2UnpPODRnCi0tLSB6Vm1SSlBFOWhUbEtoK3I1bnJQclUwWCtTNmJhdmF6Y0R3MENlbUlWY3RVCvhogJzGiRUI8+1RtOsTfFZVf70SdcKg+f2fwWmwI4myKS6ecmZH14M+zZkW" }
+

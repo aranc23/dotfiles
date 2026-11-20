@@ -32,6 +32,13 @@
       "variants": []
     },
     {
+      "path": "home/.config/fnox/config.toml",
+      "autosave": true,
+      "encrypt": false,
+      "allow_plaintext": true,
+      "variants": []
+    },
+    {
       "path": "home/.config/kitty/kitty.conf",
       "autosave": true,
       "encrypt": false,
@@ -243,6 +250,8 @@
     "home/.bao": 384,
     "home/.bash_profile": 384,
     "home/.config": 448,
+    "home/.config/fnox": 448,
+    "home/.config/fnox/config.toml": 384,
     "home/.config/kitty": 448,
     "home/.config/systemd": 509,
     "home/.config/systemd/user": 509,
