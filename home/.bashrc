@@ -156,4 +156,5 @@ export HISTSIZE=1000
 
 which fzf 2>/dev/null >/dev/null && eval "$(fzf --bash)"
 which zoxide 2>/dev/null >/dev/null && eval "$(zoxide init bash)"
+which fnox 2>/dev/null >/dev/null && eval "$(fnox activate bash)"
 unset -f pathmunge
