@@ -309,6 +309,9 @@ aube = { path = "locks/npm-mcp-remote/0.16.6", digest = "sha256:a720a0e6b1bf9ff7
 backend = "npm:mcp-remote"
 specifiers = ["latest"]
 
+[tools."npm:mcp-remote".provenance]
+repository = "github.com/punkpeye/mcp-remote"
+
 [[tools.oh-my-posh]]
 version = "32.0.0"
 backend = "aqua:JanDeDobbeleer/oh-my-posh"

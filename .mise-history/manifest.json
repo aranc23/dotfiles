@@ -116,12 +116,6 @@
       "variants": []
     },
     {
-      "path": "home/Library/LaunchAgents/com.user.org-sync.plist",
-      "autosave": true,
-      "encrypt": false,
-      "variants": []
-    },
-    {
       "path": "home/bin/diskuser",
       "autosave": true,
       "encrypt": false,
@@ -225,15 +219,16 @@
     "config/conf.d/zfs": 448,
     "config/conf.d/zfs/mise.toml": 384,
     "config/config.ag.toml": 436,
+    "config/config.media.toml": 436,
     "config/config.toml": 384,
     "config/dotfiles": 509,
     "config/dotfiles/.gitkeep": 384,
     "config/locks": 509,
     "config/locks/mise.ai": 509,
     "config/locks/mise.ai/opencode": 509,
-    "config/locks/mise.ai/opencode/2.3.0~009061c2": 509,
-    "config/locks/mise.ai/opencode/2.3.0~009061c2/aube-lock.yaml": 384,
-    "config/locks/mise.ai/opencode/2.3.0~009061c2/package.json": 384,
+    "config/locks/mise.ai/opencode/2.3.2~009061c2": 509,
+    "config/locks/mise.ai/opencode/2.3.2~009061c2/aube-lock.yaml": 384,
+    "config/locks/mise.ai/opencode/2.3.2~009061c2/package.json": 384,
     "config/locks/npm-mcp-remote": 509,
     "config/locks/npm-mcp-remote/0.16.6": 509,
     "config/locks/npm-mcp-remote/0.16.6/aube-lock.yaml": 384,
@@ -253,16 +248,18 @@
     "home/.config/systemd/user": 509,
     "home/.config/systemd/user/dev.mise.mise-history.service.d": 509,
     "home/.config/zellij": 509,
+    "home/.forward": 436,
     "home/.perltidyrc": 384,
     "home/.poshthemes": 509,
+    "home/.procmailrc": 384,
     "home/.ssh": 448,
     "home/.ssh/campus.sh": 448,
     "home/.ssh/crashland.sh": 448,
     "home/.ssh/mac-test-net.sh": 448,
     "home/.tmux.conf": 384,
-    "home/Library": 448,
-    "home/Library/LaunchAgents": 509,
     "home/bin": 448,
-    "home/bin/keychaintmux": 448
+    "home/bin/keychaintmux": 448,
+    "home/bin/org-sync": 488,
+    "home/bin/zfsmgr-send-all": 448
   }
 }
