@@ -32,6 +32,13 @@
       "variants": []
     },
     {
+      "path": "home/.config/fnox/config.toml",
+      "autosave": true,
+      "encrypt": false,
+      "allow_plaintext": true,
+      "variants": []
+    },
+    {
       "path": "home/.config/kitty/kitty.conf",
       "autosave": true,
       "encrypt": false,
@@ -212,6 +219,7 @@
     "config/conf.d/agents/opencode": 448,
     "config/conf.d/agents/templates": 509,
     "config/conf.d/claude": 448,
+    "config/conf.d/fnox": 509,
     "config/conf.d/sops": 448,
     "config/conf.d/sops/mise.toml": 384,
     "config/conf.d/ssh": 448,
@@ -243,6 +251,8 @@
     "home/.bao": 384,
     "home/.bash_profile": 384,
     "home/.config": 448,
+    "home/.config/fnox": 448,
+    "home/.config/fnox/config.toml": 384,
     "home/.config/kitty": 448,
     "home/.config/systemd": 509,
     "home/.config/systemd/user": 509,
