@@ -59,6 +59,7 @@ node = "latest"
 "~/bin/privoxy.env" = { mode = "track" }
 "~/bin/rekey.rb" = { mode = "track" }
 "~/bin/start-puppet-editor-services" = { mode = "track" }
+"~/bin/zpool-orphans" = { mode = "track" }
 
 [history]
 exclude = ["**/*.swp", "**/*~", "**/#*#", "**/.#*", "~/.config/mise/config.local.toml", "~/.config/mise/*.local.toml", "/home/spin/.mise/config/age.txt"]

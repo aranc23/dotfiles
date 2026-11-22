@@ -200,6 +200,12 @@
       "autosave": true,
       "encrypt": false,
       "variants": []
+    },
+    {
+      "path": "home/bin/zpool-orphans",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
     }
   ],
   "exclude": [
@@ -270,6 +276,7 @@
     "home/bin": 448,
     "home/bin/keychaintmux": 448,
     "home/bin/org-sync": 488,
-    "home/bin/zfsmgr-send-all": 448
+    "home/bin/zfsmgr-send-all": 448,
+    "home/bin/zpool-orphans": 360
   }
 }
