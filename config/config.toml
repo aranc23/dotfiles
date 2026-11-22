@@ -4,6 +4,7 @@ age.key_file = "~/.config/mise/age.txt"
 sops.age_key_file = "~/.config/mise/age.txt"
 sops.rops = false
 sops.strict = false
+self_update.auto=true
 [settings.history]
 allow_plaintext_history = true
 [bootstrap.services.mise-history]
