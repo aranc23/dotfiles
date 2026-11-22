@@ -1,0 +1,23 @@
+#! /bin/bash
+
+used=$(mktemp)
+(
+    zpool list -vH -p -L | awk '{print $1}'
+    find /sys/block/md*/slaves/ -type l | xargs -n1 basename | sed -r 's/[0-9]+$//' | sort -u
+    pvs --reportformat json | jq -r '.report[0].pv[] | .pv_name'
+) | grep -E '^sd' | sed -r 's/[0-9]+$//' | sort > $used
+
+sorted=$(mktemp)
+sort -u $used > $sorted
+if (( $(wc -l < $used) != $(wc -l < $sorted) )); then
+    echo "Error: duplicate devices in zpool status, mdadm or pvs output (may be in use spares)" >&2
+    comm -2 -3 $used $sorted >&2
+    echo "end duplicate devices" >&2
+fi
+rm -f $used
+for dev in $(lshw -quiet -json -class disk | jq -r '.[] | select(.id != "medium") | select(.id | contains("disk")) | .logicalname' | sed -r 's|/dev/||' | grep -E '^sd' ) ; do
+    if ! grep -E -q "^${dev}$" $sorted; then
+        echo $dev
+    fi
+done
+rm -f $sorted
