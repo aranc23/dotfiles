@@ -11,9 +11,9 @@ disable_tools = ["claude"]
 "~/.config/opencode/opencode.json/lsp" = { source = "opencode/lsp.json", merge = true, format = "json" }
 "~/.config/opencode/opencode.json/provider" = { source = "opencode/provider.json", merge = true, format = "json", template = "tera" }
 "~/.gemini/config/mcp_config.json/mcp" = { source = "agy/mcp.json", merge = true, format = "json", template = "tera"}
-"~/.config/mise/conf.d/git.local.toml/seed" = { source = "templates/private.toml", template = "tera", merge = "missing" }
-[bootstrap.secrets]
-gitlab_personal_access_token = "GITLAB_PERSONAL_ACCESS_TOKEN"
-gitea_host = "GITEA_HOST"
-gitea_access_token = "GITEA_ACCESS_TOKEN"
-github_pat = "GITHUB_PAT"
+#"~/.config/mise/conf.d/git.local.toml/seed" = { source = "templates/private.toml", template = "tera", merge = "missing" }
+# [bootstrap.secrets]
+# gitlab_personal_access_token = "GITLAB_PERSONAL_ACCESS_TOKEN"
+# gitea_host = "GITEA_HOST"
+# gitea_access_token = "GITEA_ACCESS_TOKEN"
+# github_pat = "GITHUB_PAT"
