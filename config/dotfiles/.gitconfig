@@ -1,0 +1,20 @@
+{%- set hostname = exec(command="hostname -s") | trim -%}
+[user]
+	name = Aran Cox
+	email = "{% if hostname is matching(pat="^(\\w-lnx\\d|fastx\\d)") %}aran-cox@uiowa.edu{% else %}arancox@gmail.com{% endif %}"
+[push]
+	default = upstream
+
+[alias]
+	publish = !sh -c 'git push $0 \"$1\" && git config \"branch.$1.remote\" $0 && \
+	git config \"branch.$1.merge\" \"refs/heads/$1\"'
+
+[init]
+	defaultBranch = main
+[merge]
+	conflictstyle = diff3
+[difftool "emacsclient"]
+	cmd = emacsclient -c --eval \"(emerge-files \\\"$LOCAL\\\" \\\"$BASE\\\" \\\"$REMOTE\\\" \\\"$MERGED\\\")\"
+	#cmd = emacsclient --eval \"(emerge-files \\\"$LOCAL\\\" \\\"$REMOTE\\\")\"
+[diff]
+	tool = emacsclient

@@ -1,0 +1,6 @@
+[env_sets]
+uiowa = ["claude"]
+crashland = ["ai"]
+#server = ["server", "ssh", "pac"]
+#workstation = ["workstation", "ssh", "pac", "raycast"]
+#a-lnx005 = ["workstation","claude","ag","org","linux"]

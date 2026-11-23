@@ -1,0 +1,5 @@
+[dotfiles]
+"~/bin/org-sync" = { mode = "track" }
+"~/.config/systemd/user/org-sync.service" = { mode = "track" }
+[tools]
+watchexec = "latest"

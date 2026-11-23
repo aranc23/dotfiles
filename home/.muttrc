@@ -1,0 +1,154 @@
+# distributed by puppet, do not modify locally
+
+# the following control caching
+# they are not available in mutt 1.4 and will cause errors
+set header_cache=~/.mutt_header_cache
+set message_cachedir=~/.mutt_message_cache
+set header_cache_compress="yes"
+set message_cache_clean="yes"
+source ~/.muttrc.mailboxes
+
+set envelope_from=yes
+set mbox_type=Maildir
+
+#set spoolfile="imaps://mail.divms.uiowa.edu/"
+set spoolfile="/mnt/nfs/clasnetappvm/maildirs/accx/Inbox/"
+set folder="/mnt/nfs/clasnetappvm/maildirs/accx/Inbox/"
+
+set move="no" 
+set mask="!^\\.[^.]"
+
+set record="+.Sent"
+set postponed="+.Drafts"
+set tilde="yes"
+#alternates = "acox@ia\.primustel\.com|arancox@gmail\.com|arancox@mchsi\.com|spin667@mchsi\.com|acox@voip\.primustel\.com|acox@cv\.telegroup\.com"
+#lists = "eng@(ia\.primustel|cv\.telegroup)\.com"
+
+set imap_check_subscribed = yes
+set imap_list_subscribed = no
+
+my_hdr From: Aran Cox <aran-cox@uiowa.edu>
+set imap_user = accx
+set from = aran-cox@uiowa.edu
+set realname = "Aran Cox"
+
+folder-hook . set sort=date-received
+
+ignore *
+unignore From To Cc Subject Date Reply-To Organization X-Mailer User-Agent
+hdr_order From: Date: To: Cc: Subject:
+
+unset reply_self
+
+set implicit_autoview="yes"
+#set editor="emacs -nw"
+set editor="emacsclient -nw"
+auto_view text/html
+
+alternative_order text/plain text/html
+
+#mailboxes imaps://mail.divms.uiowa.edu/INBOX
+
+bind generic <end> last-entry
+
+alias mike Michael Perry <michaelperry@mchsi.com>
+alias dmitry Dmitry Isakbayev <dmitry@transnexus.com>
+alias acate Alicia Cate <acate@ia.primustel.com>
+alias dreiman Doug Reiman <dreiman@ia.primustel.com>
+alias kmeeks Kyle Meeks <kmeeks@PRIMUSTEL.com>
+alias jbs Jeff Sackett <jbs@ia.primustel.com>
+alias tsmart Tommy Smart <tsmart@ia.primustel.com>
+alias smullins Sam Mullins <SMullins@broadsoft.com>
+alias sam Sam Mullins <smullins@mchsi.com>
+alias msmart Mary Smart <msmart@ia.primustel.com>
+alias pdombro Paul Dombrowski <pdombro01@mchsi.com>
+alias pbabcock Paul Babcock <pbabcock@ia.primustel.com>
+alias jbusta Jayme Busta <jbusta@ia.primustel.com>
+alias eng VoIP Engineering <eng@ia.primustel.com>
+alias dev Development <develop@ia.primustel.com>
+alias mscoville Melvin Scoville <mscoville@ia.primustel.com>
+alias kshark Kevin Sharkness <kshark@ia.primustel.com>
+alias droberts Doug Robertson <droberts@ia.primustel.com>
+alias bgloeck Bryan Gloeckner <bgloeck@ia.primustel.com>
+alias rbrown Rory Brown <rbrown@ia.primustel.com>
+alias rsnake Randy Snakenberg <rsnake@ia.primustel.com>
+alias rmoore Randy Moore <rmoore@ia.primustel.com>
+alias minmon Michael Inmon <MInmon@primustel.com>
+alias sts STS <OTS-STS@PRIMUSTEL.com>
+alias nts NTS <OTS-NTS@PRIMUSTEL.com>
+alias njswitch NJSwitch2 <NJSwitch2@PRIMUSTEL.com>
+alias htoy Howard Toy <HToy@PRIMUSTEL.com>
+alias jcarp Joseph Carpenter <JCarpenter@PRIMUSTEL.com>
+alias rczire Robert Czire <rczire@primustel.com>
+alias jkoettel Jaime Koettel <jkoettel@ia.PRIMUSTEL.com>
+alias rzhang Run Zhang <rzhang@ia.primustel.com>
+alias scrain \"Steven P. Crain\" <scrain@PRIMUSTEL.com>
+alias spencer \"SMITH,SPENCER LAVERE\" <lavere@ucla.edu>
+alias erin Erin Perry <eriuperry@home.com>
+alias mspinler Matt Spinler <spinler@us.ibm.com>
+alias svance Steve Vance <svance@advpubtech.com>
+alias homer Lee Hommer <lhommer@hrserase.com>
+alias cspinler Chris Spinler <christopher-spinler@uiowa.edu>
+alias jwelch-work Jason Welch <Jwelch@horsesmouth.com>
+alias mspinler-yahoo Matt Spinler <mspinler@yahoo.com>
+alias jwelch Jason Welch <jpwelch74@yahoo.com>
+alias george \"Andrus, George\" <GANdrus@PRIMUSTEL.com>
+alias sgardner Steve Gardner <SGardner@PRIMUSTEL.com>
+alias jcarpenter Joseph Carpenter <JCarpenter@PRIMUSTEL.com>
+alias ahadji Alexios Hadji <AHadji@PRIMUSTEL.com>
+alias jjernigan Jason Jernigan <JJernigan@PRIMUSTEL.com>
+alias cbradley Carrie Bradley <CBradley@PRIMUSTEL.com>
+alias hkassem Hassan Kassem <HKassem@PRIMUSTEL.com>
+alias hassan \"Kassem, Hassan\" <HKassem@PRIMUSTEL.com>
+alias jill Jill Cox <jillmarycox@gmail.com>
+alias jwiseman Jillian Wiseman <jwiseman@trinicomp.com>
+alias dpinches \"Pinches, David\" <DPinches@primustel.com>
+alias MBettencourt \"Bettencourt, Michael\" <MBettencourt@primustel.com>
+alias gandrus \"Andrus, George\" <GANdrus@PRIMUSTEL.com>
+alias AOrangi \"Orangi, Afsaneh\" <AOrangi@PRIMUSTEL.com>
+alias jegles \"Egles, James\" <jegles@PRIMUSTEL.com>
+alias adierlam Andy Dierlam <adierlam@PRIMUSTEL.com>
+alias VMorton \"Morton, Vivian\" <VMorton@lingoinc.net>
+alias jbuelow Jerry Buelow <jbuelow@ia.primustel.com>
+alias rdierlam \"Dierlam, Richard\" <RDierlam@PRIMUSTEL.com>
+alias tlu \"Lu, Tony\" <TLu@lingoinc.net>
+alias bbratten Bob Bratten <bbratten@ia.primustel.com>
+alias dawnadalbey Dawna Dalbey <dawnadalbey@ia.primustel.com>
+alias ddalbey Dawna Dalbey <dawnadalbey@ia.primustel.com>
+alias NHess \"Hess, Nichole\" <NHess@PrimusTel.com>
+alias vgupta Vipul Gupta <vgupta@ia.primustel.com>
+alias dsawyer David Sawyer <sawyer.d@mchsi.com>
+alias jwalczak Jim Walczak <j.walczak@f5.com>
+alias lhoffman Lynne Hoffman <lhoffman@ia.primustel.com>
+alias arne Arne Bergquist <ABerquist@PRIMUSTEL.com>
+alias alberto Alberto Gasparoni <albertogasparoni@yahoo.com>
+alias jegles Jim Egles <jegles@primustel.com>
+alias andrew Andrew <andrewfh@mchsi.com>
+alias mbelay \"Belay, Melaku\" <MBelay@PRIMUSTEL.com>
+alias MMagill \"Magill, Mike\" <MMagill@PRIMUSTEL.com>
+alias jmartin Justin Martin <JMartin@primustel.com.au>
+alias vduong \"Duong, Vicki\" <VDuong@PRIMUSTEL.com>
+alias lgrubbs Linda Grubbs <lgrubbs@ia.primustel.com>
+alias bfangmann \"Fangmann, Blythe\" <BFangmann@PRIMUSTEL.com>
+alias mwebster \"Webster, Michelle\" <MWebster@PRIMUSTEL.com>
+alias jcoltman \"Coltman, John\" <JColtman@PRIMUSTEL.com>
+alias rbrun \"Brun, Rene\" <RBrun@PRIMUSTEL.com>
+alias abergquist \"Bergquist, Arne\" <ABergquist@PRIMUSTEL.com>
+alias wjoyce \"Joyce, Wesley\" <WJoyce@PRIMUSTEL.com>
+alias gmann \"Mann, Gurjeevan\" <GMann@PRIMUSTEL.com>
+alias bqutob \"Qutob, Bobby Ihab\" <BQutob@PRIMUSTEL.com>
+alias sraj \"Raj, Sajai\" <SRaj@PRIMUSTEL.com>
+alias ppunjabhai \"Punjabhai, Patel\" <PPunjabhai@PRIMUSTEL.com>
+alias kphillips \"Phillips, Kamonda\" <KPhillips@PRIMUSTEL.com>
+alias ggupta \"Gupta, Gaurav\" <ggupta@primustel.com>
+alias bgarada \"Garada, Basem\" <bgarada@PRIMUSTEL.com>
+alias jhaumersen Jay Haumersen <jhaumersen@ia.primustel.com>
+alias rquigley Ryan Quigley <RQuigley@PRIMUSTEL.com>
+alias kentc Kent Cumberland <kentc@ia.primustel.com>
+alias mikram \"Ikram, Muhammad\" <MIkram@PRIMUSTEL.com>
+alias adesai Ahmed Desai <adesai@primustel.co.uk>
+alias bpandian Bhaskar Pandian <bpandian@ia.primustel.com>
+alias eros Eulises <eros2746@live.com>
+alias kshimizu Koji SHIMIZU <kshimizu@primustel.co.jp>
+alias ngafar \"Gafar, Naz\" <NGafar@primustel.com>
+alias ghugo \"Hugo, Graham\" <ghugo@primustel.co.uk>
