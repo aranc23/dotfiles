@@ -11,7 +11,7 @@
     "github": {
       "serverUrl": "https://api.githubcopilot.com/mcp/",
       "headers": {
-        "Authorization": "Bearer {{ get_env(name="GITHUB_PAT", default="missing") }}"
+        "Authorization": "Bearer {{ exec(command="fnox -P gitea get GITHUB_PAT") | trim }}"
       },
       "disabled": false
     }
