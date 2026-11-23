@@ -4,7 +4,7 @@
       "command": "gitea-mcp",
       "env": {
         "GITEA_URL": "{{ exec(command='mise env --json | jq -r .GITEA_HOST') | trim }}",
-        "GITEA_TOKEN": "{{ exec(command='mise env --json | jq -r .GITEA_ACCESS_TOKEN') | trim }}",
+        "GITEA_TOKEN": "{{ "{{ get_env(name="GITEA_TOKEN", default="missing") }}"
         "GITEA_ACCESS_TOKEN": "{{ get_env(name="GITEA_ACCESS_TOKEN", default="missing") }}"
       }
     },
