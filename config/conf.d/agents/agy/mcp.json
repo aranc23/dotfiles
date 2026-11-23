@@ -3,7 +3,7 @@
     "gitea-mcp": {
       "command": "gitea-mcp",
       "env": {
-        "GITEA_URL": "{{ get_env(name="GITEA_HOST", default="missing") }}"
+        "GITEA_URL": "{{ get_env(name="GITEA_HOST", default="missing") }}",
         "GITEA_TOKEN": "{{ get_env(name="GITEA_ACCESS_TOKEN", default="missing") }}",
         "GITEA_ACCESS_TOKEN": "{{ get_env(name="GITEA_ACCESS_TOKEN", default="missing") }}"
       }
