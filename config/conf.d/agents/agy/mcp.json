@@ -3,9 +3,9 @@
     "gitea-mcp": {
       "command": "gitea-mcp",
       "env": {
-        "GITEA_URL": "{{ get_env(name="GITEA_HOST", default="missing") }}",
-        "GITEA_TOKEN": "{{ get_env(name="GITEA_ACCESS_TOKEN", default="missing") }}",
-        "GITEA_ACCESS_TOKEN": "{{ get_env(name="GITEA_ACCESS_TOKEN", default="missing") }}"
+        "GITEA_URL": "{{ exec(command="fnox -P gitea get GITEA_HOST") | trim }}",
+        "GITEA_TOKEN": "{{ exec(command="fnox -P gitea get GITEA_ACCESS_TOKEN") | trim }}",
+        "GITEA_ACCESS_TOKEN": "{{ exec(command="fnox -P gitea get GITEA_ACCESS_TOKEN") | trim }}"
       }
     },
     "github": {
