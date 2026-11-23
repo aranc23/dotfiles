@@ -18,4 +18,4 @@ disable_tools = ["claude"]
 # gitea_access_token = "GITEA_ACCESS_TOKEN"
 # github_pat = "GITHUB_PAT"
 [env]
-GITEA_URL = "{{ get_env(name="GITEA_HOST", default="missing") }}"
+#GITEA_URL = "{{ get_env(name="GITEA_HOST", default="missing") }}"
