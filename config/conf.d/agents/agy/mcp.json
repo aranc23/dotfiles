@@ -3,15 +3,15 @@
     "gitea-mcp": {
       "command": "gitea-mcp",
       "env": {
-        "GITEA_URL": "{{ exec(command="fnox -P gitea get GITEA_HOST") | trim }}",
-        "GITEA_TOKEN": "{{ exec(command="fnox -P gitea get GITEA_ACCESS_TOKEN") | trim }}",
-        "GITEA_ACCESS_TOKEN": "{{ exec(command="fnox -P gitea get GITEA_ACCESS_TOKEN") | trim }}"
+        "GITEA_URL": "{{ exec(command="~/.local/share/mise/shims/fnox -P gitea get GITEA_HOST") | trim }}",
+        "GITEA_TOKEN": "{{ exec(command="~/.local/share/mise/shims/fnox -P gitea get GITEA_ACCESS_TOKEN") | trim }}",
+        "GITEA_ACCESS_TOKEN": "{{ exec(command="~/.local/share/mise/shims/fnox -P gitea get GITEA_ACCESS_TOKEN") | trim }}"
       }
     },
     "github": {
       "serverUrl": "https://api.githubcopilot.com/mcp/",
       "headers": {
-        "Authorization": "Bearer {{ exec(command="fnox -P github get GITHUB_PAT") | trim }}"
+        "Authorization": "Bearer {{ exec(command="~/.local/share/mise/shims/fnox -P github get GITHUB_PAT") | trim }}"
       },
       "disabled": false
     }
