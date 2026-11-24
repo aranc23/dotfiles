@@ -588,6 +588,50 @@ url = "https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15
 url_api = "https://api.github.com/repos/BurntSushi/ripgrep/releases/assets/478119643"
 
 [[tools.ruby]]
+version = "3.2.5"
+backend = "core:ruby"
+specifiers = ["3.2.5"]
+
+[tools.ruby.options]
+compile = "false"
+precompiled_url = "jdx/ruby"
+ruby_build_repo = "https://github.com/rbenv/ruby-build.git"
+ruby_install = "false"
+
+[tools.ruby."platforms.linux-arm64"]
+checksum = "sha256:ef0610b498f60fb5cfd77b51adb3c10f4ca8ed9a17cb87c61e5bea314ac34a16"
+url = "https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.5.tar.gz"
+
+[tools.ruby."platforms.linux-arm64-musl"]
+checksum = "sha256:ef0610b498f60fb5cfd77b51adb3c10f4ca8ed9a17cb87c61e5bea314ac34a16"
+url = "https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.5.tar.gz"
+
+[tools.ruby."platforms.linux-x64"]
+checksum = "sha256:ef0610b498f60fb5cfd77b51adb3c10f4ca8ed9a17cb87c61e5bea314ac34a16"
+url = "https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.5.tar.gz"
+
+[tools.ruby."platforms.linux-x64-musl"]
+checksum = "sha256:ef0610b498f60fb5cfd77b51adb3c10f4ca8ed9a17cb87c61e5bea314ac34a16"
+url = "https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.5.tar.gz"
+
+[tools.ruby."platforms.macos-arm64"]
+checksum = "sha256:ef0610b498f60fb5cfd77b51adb3c10f4ca8ed9a17cb87c61e5bea314ac34a16"
+url = "https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.5.tar.gz"
+
+[tools.ruby."platforms.macos-x64"]
+checksum = "sha256:ef0610b498f60fb5cfd77b51adb3c10f4ca8ed9a17cb87c61e5bea314ac34a16"
+url = "https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.5.tar.gz"
+
+[[tools.ruby]]
+version = "3.2.5"
+backend = "core:ruby"
+specifiers = ["3.2.5"]
+
+[tools.ruby."platforms.windows-x64"]
+checksum = "sha256:3e17f7e60834cfac4b2aae13677c19d3222b52bee328c3c22629246c00cd543c"
+url = "https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.2.5-1/rubyinstaller-3.2.5-1-x64.7z"
+
+[[tools.ruby]]
 version = "3.4.13"
 backend = "core:ruby"
 specifiers = ["3"]
@@ -690,6 +734,7 @@ provenance = "cosign"
 version = "3.8"
 backend = "aqua:tmux/tmux-builds"
 specifiers = ["latest"]
+unsupported_platforms = ["windows-x64"]
 
 [tools.tmux."platforms.linux-arm64"]
 checksum = "sha256:f399311b1159705e69839eaf4f6f68c8b8540dc3a8538b87c30dedb9c3c7fc23"
