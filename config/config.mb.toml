@@ -1,6 +1,6 @@
 [dotfiles]
 "~/Library/LaunchAgents/com.user.org-sync.plist" = { mode = "track" }
 "~/bin/org-sync" = { mode = "track" }
-"~/.config/fnox/config.local.toml" = { mode = "track" }
+#"~/.config/fnox/config.local.toml" = { mode = "track" }
 [tools]
 watchexec = "latest"
