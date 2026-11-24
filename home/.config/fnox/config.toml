@@ -12,6 +12,7 @@ recipients = [
   "age1tag1q2wwqy2zkxzahxl0q9ypxzcta8pja62wutqvfrwjptn98k6f5d5sv830r3t",
   "age1kcg2k2gua490zf34p9kqhpry9ln9xjgsmrafxcjthg063jg8dycs9sdqun"]
 
+# share a key with sops:
 key_file = "~/.config/sops/age/keys.txt"
 
 [secrets]
