@@ -32,6 +32,12 @@
       "variants": []
     },
     {
+      "path": "home/.config/fnox/config.local.toml",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
       "path": "home/.config/fnox/config.toml",
       "autosave": true,
       "encrypt": false,
@@ -118,6 +124,12 @@
     },
     {
       "path": "home/.tmux.conf",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/Library/LaunchAgents/com.user.org-sync.plist",
       "autosave": true,
       "encrypt": false,
       "variants": []
@@ -268,6 +280,8 @@
     "home/.ssh/crashland.sh": 448,
     "home/.ssh/mac-test-net.sh": 448,
     "home/.tmux.conf": 384,
+    "home/Library": 448,
+    "home/Library/LaunchAgents": 509,
     "home/bin": 448,
     "home/bin/keychaintmux": 448,
     "home/bin/zpool-orphans": 360
