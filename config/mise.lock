@@ -49,6 +49,14 @@ url = "https://github.com/FiloSottile/age/releases/download/v1.3.2/age-v1.3.2-wi
 url_api = "https://api.github.com/repos/FiloSottile/age/releases/assets/535541937"
 provenance = "github-attestations"
 
+[[tools."cargo:taplo-cli"]]
+version = "0.10.0"
+backend = "cargo:taplo-cli"
+specifiers = ["latest"]
+
+[tools."cargo:taplo-cli".options]
+features = "lsp"
+
 [[tools.chezmoi]]
 version = "2.74.1"
 backend = "aqua:twpayne/chezmoi"
@@ -586,50 +594,6 @@ checksum = "sha256:71b2fef860abe467217a538ff31de02f5258807c0129f771846f87bd029aa
 checksum_source = "mise-versions"
 url = "https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-x86_64-pc-windows-msvc.zip"
 url_api = "https://api.github.com/repos/BurntSushi/ripgrep/releases/assets/478119643"
-
-[[tools.ruby]]
-version = "3.2.5"
-backend = "core:ruby"
-specifiers = ["3.2.5"]
-
-[tools.ruby.options]
-compile = "false"
-precompiled_url = "jdx/ruby"
-ruby_build_repo = "https://github.com/rbenv/ruby-build.git"
-ruby_install = "false"
-
-[tools.ruby."platforms.linux-arm64"]
-checksum = "sha256:ef0610b498f60fb5cfd77b51adb3c10f4ca8ed9a17cb87c61e5bea314ac34a16"
-url = "https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.5.tar.gz"
-
-[tools.ruby."platforms.linux-arm64-musl"]
-checksum = "sha256:ef0610b498f60fb5cfd77b51adb3c10f4ca8ed9a17cb87c61e5bea314ac34a16"
-url = "https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.5.tar.gz"
-
-[tools.ruby."platforms.linux-x64"]
-checksum = "sha256:ef0610b498f60fb5cfd77b51adb3c10f4ca8ed9a17cb87c61e5bea314ac34a16"
-url = "https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.5.tar.gz"
-
-[tools.ruby."platforms.linux-x64-musl"]
-checksum = "sha256:ef0610b498f60fb5cfd77b51adb3c10f4ca8ed9a17cb87c61e5bea314ac34a16"
-url = "https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.5.tar.gz"
-
-[tools.ruby."platforms.macos-arm64"]
-checksum = "sha256:ef0610b498f60fb5cfd77b51adb3c10f4ca8ed9a17cb87c61e5bea314ac34a16"
-url = "https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.5.tar.gz"
-
-[tools.ruby."platforms.macos-x64"]
-checksum = "sha256:ef0610b498f60fb5cfd77b51adb3c10f4ca8ed9a17cb87c61e5bea314ac34a16"
-url = "https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.5.tar.gz"
-
-[[tools.ruby]]
-version = "3.2.5"
-backend = "core:ruby"
-specifiers = ["3.2.5"]
-
-[tools.ruby."platforms.windows-x64"]
-checksum = "sha256:3e17f7e60834cfac4b2aae13677c19d3222b52bee328c3c22629246c00cd543c"
-url = "https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.2.5-1/rubyinstaller-3.2.5-1-x64.7z"
 
 [[tools.ruby]]
 version = "3.4.13"
