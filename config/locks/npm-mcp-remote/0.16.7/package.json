@@ -2,6 +2,6 @@
   "name": "mise-npm-install",
   "private": true,
   "dependencies": {
-    "mcp-remote": "0.16.6"
+    "mcp-remote": "0.16.7"
   }
 }
