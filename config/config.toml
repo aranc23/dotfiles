@@ -29,6 +29,7 @@ rust = "latest"
 python = "3"
 node = "latest"
 "npm:mcp-remote" = "latest"
+"github:voxpupuli/jig" = "latest"
 "cargo:taplo-cli" = { version = "latest", features = "lsp" }
 
 [[tools.ruby]]
