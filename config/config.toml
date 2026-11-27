@@ -4,6 +4,7 @@ age.key_file = "~/.config/mise/age.txt"
 sops.age_key_file = "~/.config/mise/age.txt"
 sops.rops = false
 sops.strict = false
+self_update.auto=true
 [settings.history]
 allow_plaintext_history = true
 [bootstrap.services.mise-history]
@@ -28,7 +29,8 @@ rust = "latest"
 python = "3"
 node = "latest"
 "npm:mcp-remote" = "latest"
-fnox = "latest"
+"github:voxpupuli/jig" = "latest"
+"cargo:taplo-cli" = { version = "latest", features = "lsp" }
 
 [[tools.ruby]]
   version = "3"
@@ -59,6 +61,7 @@ fnox = "latest"
 "~/bin/privoxy.env" = { mode = "track" }
 "~/bin/rekey.rb" = { mode = "track" }
 "~/bin/start-puppet-editor-services" = { mode = "track" }
+"~/bin/zpool-orphans" = { mode = "track" }
 
 [history]
 exclude = ["**/*.swp", "**/*~", "**/#*#", "**/.#*", "~/.config/mise/config.local.toml", "~/.config/mise/*.local.toml", "/home/spin/.mise/config/age.txt"]

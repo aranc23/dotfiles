@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       mcp-remote:
-        specifier: 0.16.6
-        version: 0.16.6
+        specifier: 0.16.7
+        version: 0.16.7
 
 packages:
 
@@ -181,8 +181,8 @@ packages:
     resolution: {integrity: sha512-/IXtbwEk5HTPyEwyKX6hGkYXxM9nbj64B+ilVJnC/R6B0pH5G4V3b0pVbL7DBj4tkhBAppbQUlf6F6Xl9LHu1g==}
     engines: {node: '>= 0.4'}
 
-  mcp-remote@0.16.6:
-    resolution: {integrity: sha512-QqlBqut/oeDUFwrB/Igs5vGikWSn6h5iM+7TCmiTGJAIuS3OJjzThWGjKLLtAz+NnLozvs2c2wGDkAXpzHepqw==}
+  mcp-remote@0.16.7:
+    resolution: {integrity: sha512-mKYcD/mkD5yGlyc2fwU7zFkgGRxzEzBplPcLhoykgaqnQxW/IVC4ol6VHEqIhJkKDdmSNToI9MXiOXCsrsTjxA==}
     hasBin: true
 
   media-typer@0.3.0:
@@ -219,8 +219,8 @@ packages:
     resolution: {integrity: sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==}
     engines: {node: '>= 0.6'}
 
-  object-inspect@1.13.4:
-    resolution: {integrity: sha512-W67iLl4J2EXEGTbfeHCffrjDfitvLANg0UlX3wFUUSTx92KXRFegMHUVgSqE+wvhAbi4WqjGg9czysTV2Epbew==}
+  object-inspect@1.14.0:
+    resolution: {integrity: sha512-IVgHNlp/jwQX271+Xzoq9LZNTWXxZK+cEOrGBOBxXNbn7fapnZ+Ts6TVMgNOuAezwG2wdtnMX97tTPK6VEnuOQ==}
     engines: {node: '>= 0.4'}
 
   on-finished@2.4.2:
@@ -519,7 +519,7 @@ snapshots:
 
   math-intrinsics@1.1.0: {}
 
-  mcp-remote@0.16.6:
+  mcp-remote@0.16.7:
     dependencies:
       express: 4.22.3
       open: 10.2.0
@@ -546,7 +546,7 @@ snapshots:
 
   negotiator@0.6.3: {}
 
-  object-inspect@1.13.4: {}
+  object-inspect@1.14.0: {}
 
   on-finished@2.4.2:
     dependencies:
@@ -616,27 +616,27 @@ snapshots:
   side-channel-list@1.0.1:
     dependencies:
       es-errors: 1.3.0
-      object-inspect: 1.13.4
+      object-inspect: 1.14.0
 
   side-channel-map@1.0.1:
     dependencies:
       call-bound: 1.0.4
       es-errors: 1.3.0
       get-intrinsic: 1.3.0
-      object-inspect: 1.13.4
+      object-inspect: 1.14.0
 
   side-channel-weakmap@1.0.2:
     dependencies:
       call-bound: 1.0.4
       es-errors: 1.3.0
       get-intrinsic: 1.3.0
-      object-inspect: 1.13.4
+      object-inspect: 1.14.0
       side-channel-map: 1.0.1
 
   side-channel@1.1.1:
     dependencies:
       es-errors: 1.3.0
-      object-inspect: 1.13.4
+      object-inspect: 1.14.0
       side-channel-list: 1.0.1
       side-channel-map: 1.0.1
       side-channel-weakmap: 1.0.2

@@ -39,7 +39,7 @@ case "$(hostname -s)" in
         export SNAPRAID_CONFIG_FILE="${HOME}/etc/snapraid.conf"
         ;;
     lazarus)
-        alias sshadd='ssh-add -s /usr/lib64/pkcs11/libtpm2_pkcs11.so ~/.ssh/id_ecdsa-cert.pub ; ssh-add ~/.ssh/id_ed25519_sk'
+        alias sshadd='ssh-add -s /usr/lib64/pkcs11/libtpm2_pkcs11.so ~/.ssh/id_rsa-cert.pub ~/.ssh/id_ecdsa-cert.pub ; ssh-add ~/.ssh/id_ed25519_sk'
         export SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
         ;;
     benway)
@@ -156,4 +156,5 @@ export HISTSIZE=1000
 
 which fzf 2>/dev/null >/dev/null && eval "$(fzf --bash)"
 which zoxide 2>/dev/null >/dev/null && eval "$(zoxide init bash)"
+which fnox 2>/dev/null >/dev/null && eval "$(fnox activate bash)"
 unset -f pathmunge
